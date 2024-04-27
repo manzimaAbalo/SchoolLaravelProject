@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +15,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
+});*/
+
+Route::get('/', 'Frontend\FrontendController@accueil')->name('accueil');
+
+Route::group(['namespace' => "Frontend"],function () {
+    Route::get('/a-propos', [FrontendController::class, 'aboutPage'])->name('about');
+    Route::get('/universites', [FrontendController::class, 'schoolPage'])->name('schools');
+    Route::get('/universites/{school_id}/details', [FrontendController::class, 'schoolPageDetails'])->name('details');
+    Route::get('/classement', [FrontendController::class, 'rate'])->name('rate');
+    Route::get('/login', [FrontendController::class, 'login'])->name('login');
+    Route::get('/register', [FrontendController::class, 'register'])->name('register');
+
 });
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -28,4 +43,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+//require __DIR__.'/auth.php';
