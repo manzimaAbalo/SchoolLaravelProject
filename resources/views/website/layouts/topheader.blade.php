@@ -5,13 +5,13 @@
                 <div class="header-contact-info">
                     <ul>
                         <li>
-                            <a href="tel:+01-977-2599-12"><i class="fas fa-phone-alt"></i> +228 91 71 83 27</a>
+                            <a href="tel:+228 91 71 83 27"><i class="fas fa-phone-alt"></i> +228 91 71 83 27</a>
                         </li>
                         <li>
-                            <a href="https://demo.bosathemes.com/cdn-cgi/l/email-protection#03606c6e73626d7a43676c6e626a6d2d606c6e"><i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="12717d7f62737c6b52767d7f737b7c3c717d7f">abalomanzima@gmail.com</span></a>
+                            <a href="https://mail.google.com/mail/u/0/#inbox"><i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="12717d7f62737c6b52767d7f737b7c3c717d7f">abalomanzima@gmail.com</span></a>
                         </li>
                         <li>
-                            <i class="fas fa-map-marker-alt"></i> 3146 Koontz Lane, California
+                            <i class="fas fa-map-marker-alt"></i> 376 Bd de la Kara, Lomé
                         </li>
                     </ul>
                 </div>
