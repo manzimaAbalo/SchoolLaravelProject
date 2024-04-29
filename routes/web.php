@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -31,7 +32,12 @@ Route::group(['namespace' => "Frontend"],function () {
 
 });
 
+Route::get('/', 'Admin\AdminController@home')->name('home');
 
+Route::group(['namespace' => "Admin"], function () {
+    Route::get('/login', [AdminController::class, 'login'])->name('login');
+    Route::get('/register', [AdminController::class, 'register'])->name('register');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

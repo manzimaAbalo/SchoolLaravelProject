@@ -13,7 +13,7 @@
             <div class="card mb-0">
               <div class="card-body">
                 <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
-                  <img src="../assets/images/logos/dark-logo.svg" width="180" alt="">
+                  <img src="../admin/assets/images/logos/dark-logo.svg" width="180" alt="">
                 </a>
                 <p class="text-center">Your Social Campaigns</p>
                 <form>
@@ -32,12 +32,12 @@
                         Se souvenir de moi
                       </label>
                     </div>
-                    <a class="text-primary fw-bold" href="./index.html">Mot de passe oublié ?</a>
+                    <a class="text-primary fw-bold" href="{{route('home')}}">Mot de passe oublié ?</a>
                   </div>
-                  <a href="./index.html" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Se connecter</a>
+                  <a href="{{route('login')}}" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Se connecter</a>
                   <div class="d-flex align-items-center justify-content-center">
                     <p class="fs-4 mb-0 fw-bold">Nouveau sur SchoolRate ?</p>
-                    <a class="text-primary fw-bold ms-2" href="./authentication-register.html">Créer un compte</a>
+                    <a class="text-primary fw-bold ms-2" href="{{route('register')}}">Créer un compte</a>
                   </div>
                 </form>
               </div>

@@ -4,7 +4,7 @@
 
   <!-- Inner Banner html start-->
   <section class="inner-banner-wrap">
-    <div class="inner-baner-container" style="background-image: url(assets/img/educator-img12.jpg);">
+    <div class="inner-baner-container" style="background-image: url(admin/assets/img/educator-img12.jpg);">
         <div class="container">
             <div class="inner-banner-content">
                 <h1 class="inner-title">Connexion</h1>

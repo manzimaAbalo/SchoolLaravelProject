@@ -13,7 +13,7 @@
             <div class="card mb-0">
               <div class="card-body">
                 <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
-                  <img src="../assets/images/logos/dark-logo.svg" width="180" alt="">
+                  <img src="../admin/assets/images/logos/dark-logo.svg" width="180" alt="">
                 </a>
                 <p class="text-center">Your Social Campaigns</p>
                 <form>
@@ -29,10 +29,10 @@
                     <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
                     <input type="password" class="form-control" id="exampleInputPassword1">
                   </div>
-                  <a href="./index.html" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">S'inscrire</a>
+                  <a href="{{route('register')}}" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">S'inscrire</a>
                   <div class="d-flex align-items-center justify-content-center">
                     <p class="fs-4 mb-0 fw-bold">Avez-vous deja un compte ?</p>
-                    <a class="text-primary fw-bold ms-2" href="./authentication-login.html">Se connecter</a>
+                    <a class="text-primary fw-bold ms-2" href="{{route('login')}}">Se connecter</a>
                   </div>
                 </form>
               </div>
