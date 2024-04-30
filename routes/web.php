@@ -32,7 +32,7 @@ Route::group(['namespace' => "Frontend"],function () {
 
 });
 
-Route::get('/', 'Admin\AdminController@home')->name('home');
+Route::get('/dash', 'Admin\AdminController@home')->name('home');
 
 Route::group(['namespace' => "Admin"], function () {
     Route::get('/home', [AdminController::class, 'home'])->name('home');
@@ -41,8 +41,8 @@ Route::group(['namespace' => "Admin"], function () {
     Route::get('/note', [AdminController::class, 'note'])->name('note');
     Route::get('/comment', [AdminController::class, 'comment'])->name('comment');
     Route::get('/user', [AdminController::class, 'user'])->name('user');
-    Route::get('/login', [AdminController::class, 'login'])->name('login');
-    Route::get('/register', [AdminController::class, 'register'])->name('register');
+    Route::get('/logindash', [AdminController::class, 'logindash'])->name('logindash');
+    Route::get('/registerdash', [AdminController::class, 'registerdash'])->name('registerdash');
 });
 
 Route::get('/dashboard', function () {

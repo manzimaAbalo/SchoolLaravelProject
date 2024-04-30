@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <!-- Mirrored from demo.bosathemes.com/html/educator/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Apr 2024 22:05:16 GMT -->
 <head>
     <meta charset="utf-8">

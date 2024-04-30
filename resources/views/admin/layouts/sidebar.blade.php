@@ -76,7 +76,7 @@
             <span class="hide-menu">AUTHENTIFICATION</span>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" href="{{ route('login') }}" aria-expanded="false">
+            <a class="sidebar-link" href="{{ route('logindash') }}" aria-expanded="false">
               <span>
                 <i class="ti ti-login"></i>
               </span>
@@ -84,7 +84,7 @@
             </a>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" href="{{route('register')}}" aria-expanded="false">
+            <a class="sidebar-link" href="{{route('registerdash')}}" aria-expanded="false">
               <span>
                 <i class="ti ti-user-plus"></i>
               </span>

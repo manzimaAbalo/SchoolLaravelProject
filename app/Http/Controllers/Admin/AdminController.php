@@ -32,12 +32,12 @@ class AdminController extends Controller
     public function user(){
         return view('admin.users.user');
     }
-    public function login(){
-        return view('admin.auth.login');
+    public function logindash(){
+        return view('admin.auth.logindash');
     }
 
-    public function register(){
-        return view('admin.auth.register');
+    public function registerdash(){
+        return view('admin.auth.registerdash');
     }
 
 }
