@@ -35,6 +35,12 @@ Route::group(['namespace' => "Frontend"],function () {
 Route::get('/', 'Admin\AdminController@home')->name('home');
 
 Route::group(['namespace' => "Admin"], function () {
+    Route::get('/home', [AdminController::class, 'home'])->name('home');
+    Route::get('/school', [AdminController::class, 'school'])->name('school');
+    Route::get('/rule', [AdminController::class, 'rule'])->name('rule');
+    Route::get('/note', [AdminController::class, 'note'])->name('note');
+    Route::get('/comment', [AdminController::class, 'comment'])->name('comment');
+    Route::get('/user', [AdminController::class, 'user'])->name('user');
     Route::get('/login', [AdminController::class, 'login'])->name('login');
     Route::get('/register', [AdminController::class, 'register'])->name('register');
 });
