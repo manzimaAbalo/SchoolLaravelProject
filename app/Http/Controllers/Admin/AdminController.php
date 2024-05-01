@@ -9,35 +9,31 @@ class AdminController extends Controller
 {
     //
 
-    public function home(){
-        return view('admin.home');
+    public function homePage(){
+        return view('espace-admin.pages.dashboard.home');
     }
 
-    public function school(){
-        return view('admin.schools.school');
+    public function schoolPage(){
+        return view('espace-admin.pages.schools.school');
     }
 
-    public function rule(){
-        return view('admin.rules.rule');
+    public function rulePage(){
+        return view('espace-admin.pages.rules.rule');
     }
 
-    public function note(){
-        return view('admin.notes.note');
+    public function notePage(){
+        return view('espace-admin.pages.notes.note');
     }
 
-    public function comment(){
-        return view('admin.comments.comment');
+    public function commentPage(){
+        return view('espace-admin.pages.comments.comment');
     }
 
-    public function user(){
-        return view('admin.users.user');
+    public function usersPage(){
+        return view('espace-admin.pages.users.user');
     }
-    public function logindash(){
-        return view('admin.auth.logindash');
-    }
-
-    public function registerdash(){
-        return view('admin.auth.registerdash');
+    public function loginPage(){
+        return view('espace-admin.pages.auth.logindash');
     }
 
 }

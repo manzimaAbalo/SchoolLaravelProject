@@ -34,16 +34,7 @@ Route::group(['namespace' => "Frontend"],function () {
 
 Route::get('/dash', 'Admin\AdminController@home')->name('home');
 
-Route::group(['namespace' => "Admin"], function () {
-    Route::get('/home', [AdminController::class, 'home'])->name('home');
-    Route::get('/school', [AdminController::class, 'school'])->name('school');
-    Route::get('/rule', [AdminController::class, 'rule'])->name('rule');
-    Route::get('/note', [AdminController::class, 'note'])->name('note');
-    Route::get('/comment', [AdminController::class, 'comment'])->name('comment');
-    Route::get('/user', [AdminController::class, 'user'])->name('user');
-    Route::get('/logindash', [AdminController::class, 'logindash'])->name('logindash');
-    Route::get('/registerdash', [AdminController::class, 'registerdash'])->name('registerdash');
-});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -55,4 +46,5 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-//require __DIR__.'/auth.php';
+require __DIR__.'/admin.php';
+
