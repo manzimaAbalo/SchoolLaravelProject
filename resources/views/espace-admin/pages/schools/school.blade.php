@@ -10,7 +10,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a class="text-muted text-decoration-none"
-                                        href="/office/home">Dashboard</a></li>
+                                    href="/office/home">Dashboard</a></li>
                                 <li class="breadcrumb-item" aria-current="page">Universités</li>
                             </ol>
                         </nav>
@@ -266,5 +266,6 @@
 
             </div>
         </div>
+        @include('espace-admin.pages.schools.SchoolTable')
     </div>
 @endsection
