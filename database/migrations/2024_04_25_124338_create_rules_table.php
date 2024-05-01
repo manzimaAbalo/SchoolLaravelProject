@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('rules', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
+            $table->string('libelle');
+            $table->integer('min_note')->default(1);
+            $table->integer('max_note')->default(5);
+            $table->integer('category_rule_id');
             $table->timestamps();
         });
     }

@@ -6,19 +6,19 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Rule extends Model
+class Profile extends Model
 {
     use HasFactory;
 
-    protected $fillable = ["libelle", "min_note", "max_note", "category_rule_id"];
+    protected $fillable = ["user_id", "nom", "prenoms", "email", "phone", "country", "address", "date_ncse", "profession"];
 
     /**
-     * Get the category_rule that owns the Rule
+     * Get the user that owns the Profile
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function category_rule(): BelongsTo
+    public function user(): BelongsTo
     {
-        return $this->belongsTo(CategoryRule::class, 'category_rule_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

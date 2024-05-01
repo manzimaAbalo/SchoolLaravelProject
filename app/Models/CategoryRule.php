@@ -6,20 +6,20 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Role extends Model
+class CategoryRule extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'name',
-];
+    protected $fillable = ["name", "description"];
 
     /**
-     * Get all of the users for the Role
+     * Get all of the rules for the CategoryRule
+     *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function users(): HasMany
+    public function rules(): HasMany
+    
     {
-        return $this->hasMany(User::class, 'role_id', 'id');
+        return $this->hasMany(Comment::class, 'category_rule_id', 'id');
     }
 }

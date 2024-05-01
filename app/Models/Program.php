@@ -6,19 +6,19 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Rule extends Model
+class Program extends Model
 {
     use HasFactory;
 
-    protected $fillable = ["libelle", "min_note", "max_note", "category_rule_id"];
+    protected $fillable = ["sector_id", "school_year", "title", "courses"];
 
     /**
-     * Get the category_rule that owns the Rule
+     * Get the sector that owns the Program
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function category_rule(): BelongsTo
+    public function sector(): BelongsTo
     {
-        return $this->belongsTo(CategoryRule::class, 'category_rule_id');
+        return $this->belongsTo(Sector::class, 'sector_id');
     }
 }

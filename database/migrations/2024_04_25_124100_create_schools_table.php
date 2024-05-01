@@ -13,10 +13,18 @@ return new class extends Migration
     {
         Schema::create('schools', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
+            $table->string('name');
             $table->string('description');
-            $table->string('adresse');
+            $table->string('address');
+            $table->string('contact');
+            $table->string('logo')->nullable();
+            $table->string('banner')->nullable();
+            $table->json('images')->nullable()->comment("[{name, path, ext, size}]");
+            $table->string('email');
             $table->string('site_web');
+            $table->json('infrastructure')->comment("[category, items[]]");
+            $table->json('responsable')->comment("{nom, prenom, email}");
+            $table->json('localisation')->nullable()->comment("{long, lat}"); 
             $table->timestamps();
         });
     }
