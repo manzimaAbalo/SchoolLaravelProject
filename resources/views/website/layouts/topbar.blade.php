@@ -28,7 +28,7 @@
                             </li>
 
                             <li>
-                                <a href="{{route('rate')}}">Classement</a>
+                                <a href="{{route('rate')}}">Classements</a>
                             </li>
                         </ul>
                     </nav>

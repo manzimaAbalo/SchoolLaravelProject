@@ -7,7 +7,7 @@
     <div class="inner-baner-container" style="background-image: url(assets/img/educator-img12.jpg);">
         <div class="container">
             <div class="inner-banner-content">
-                <h1 class="inner-title">Archives: Shop</h1>
+                <h1 class="inner-title">Classements : Critères</h1>
             </div>
         </div>
     </div>
@@ -19,15 +19,13 @@
         <div class="row">
             <div class="col-lg-8 right-sidebar">
                 <div class="product-notices-wrapper">
-                    <p class="product-result-count">Showing all 6 results</p>
+                    <p class="product-result-count">5 résultats affichés</p>
                     <form method="get">
                         <select name="orderby" class="orderby" aria-label="Shop order">
-                            <option value="menu_order" selected="selected">Default sorting</option>
-                            <option value="popularity">Sort by popularity</option>
-                            <option value="rating">Sort by average rating</option>
-                            <option value="date">Sort by latest</option>
-                            <option value="price">Sort by price: low to high</option>
-                            <option value="price-desc">Sort by price: high to low</option>
+                            <option value="menu_order" selected="selected">Tri par défaut</option>
+                            <option value="popularity">Trier par qualité de l'enseignement</option>
+                            <option value="rating">Trier par infrastructures</option>
+                            <option value="date">Trier par insertion professionnelle</option>
                         </select>
                     </form>
                 </div>

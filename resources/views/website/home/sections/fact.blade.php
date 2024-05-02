@@ -49,9 +49,9 @@
             <div class="col-lg-6">
                 <div class="fact-section-head">
                     <div class="title-divider"></div>
-                    <h2 class="fact-section-title">Apprentissage illimité, Possibilités illimitées !</h2>
+                    <h2 class="fact-section-title">Plateforme dédiée, fiable, illimitée !</h2>
                     <p class="fact-section-info">
-                        SchoolRate TOGO offre des opportunités d'apprentissage infinies pour les étudiants au Togo. Notre plateforme fournit des informations précieuses sur les écoles et les universités, permettant aux étudiants de prendre des décisions éclairées sur leur éducation.
+                        SchoolRate TOGO offre des opportunités d'apprentissages infinies pour les étudiants au Togo. Notre plateforme fournit des informations précieuses sur les écoles et les universités, permettant aux étudiants de prendre des décisions éclairées sur leur choix du futur.
                     </p>
                     <div class="fact-list">
                         <ul>

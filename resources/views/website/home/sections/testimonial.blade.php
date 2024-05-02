@@ -13,7 +13,7 @@
                 <div class="client-content left-content">
                     <div class="pattern-overlay circle-patten"></div>
                     <p class="client-review">
-                        “SchoolRate TOGO m'a aidé à trouver la meilleure université pour mes études. Je suis très reconnaissant pour leur plateforme.”
+                        “SchoolRate TOGO m'a aidé à trouver la meilleure université pour mes études. Je suis très reconnaissante envers eux. Merci!”
                     </p>
                     <div class="author-content">
                         <div class="author-info">

@@ -6,9 +6,9 @@
             <div class="service-content">
                 <div class="section-head">
                     <div class="title-divider"></div>
-                    <h2>Top des filières</h2>
+                    <h2>Le Top des filières</h2>
                     <div class="service-btn">
-                        <a href="categories.html" class="button-round-primary">MORE CATEGORIES</a>
+                        <a href="categories.html" class="button-round-primary">PLUSIEURS CATEGORIES</a>
                     </div>
                 </div>
                 <div class="course-type">
@@ -17,10 +17,10 @@
                     </div>
                     <h4 class="course-title">
                         <a href="course-detail.html">
-                            Engineering
+                            Ingénierie
                         </a>
                     </h4>
-                    <p class="course-durations">8 semester</p>
+                    <p class="course-durations">8 semestres</p>
                 </div>
                 <div class="course-type">
                     <div class="course-icon">
@@ -28,10 +28,10 @@
                     </div>
                     <h4 class="course-title">
                         <a href="course-detail.html">
-                            IT & Software
+                            IT & Logiciel
                         </a>
                     </h4>
-                    <p class="course-durations">6 semester</p>
+                    <p class="course-durations">6 semestres</p>
                 </div>
                 <div class="course-type">
                     <div class="course-icon">
@@ -39,10 +39,10 @@
                     </div>
                     <h4 class="course-title">
                         <a href="course-detail.html">
-                            Chemistry
+                            Médécine
                         </a>
                     </h4>
-                    <p class="course-durations">8 semester</p>
+                    <p class="course-durations">16 semestres</p>
                 </div>
             </div>
             <div class="service-content">
@@ -55,7 +55,7 @@
                             Management
                         </a>
                     </h4>
-                    <p class="course-durations">5 semester</p>
+                    <p class="course-durations">5 semestres</p>
                 </div>
                 <div class="course-type">
                     <div class="course-icon">
@@ -63,26 +63,26 @@
                     </div>
                     <h4 class="course-title">
                         <a href="course-detail.html">
-                            Literature
+                            Droit
                         </a>
                     </h4>
-                    <p class="course-durations">6 semester</p>
+                    <p class="course-durations">6 semestres</p>
                 </div>
                 <div class="course-form">
-                    <h3>Get Free Courses ! Book Your Seat Now.</h3>
+                    <h3>Obtenez des consultations gratuites ! Séances d'informations.</h3>
                     <div class="course-field">
                         <div class="row">
                             <div class="col-sm-6">
-                                <input type="text" name="name" placeholder="Your Name..">
+                                <input type="text" name="name" placeholder="Nom & Prénoms..">
                             </div>
                             <div class="col-sm-6">
-                                <input type="email" name="name" placeholder="Your Email..">
+                                <input type="email" name="name" placeholder="Email..">
                             </div>
                             <div class="col-sm-7">
-                                <input type="text" name="name" placeholder="Your Subject..">
+                                <input type="text" name="name" placeholder="Message..">
                             </div>
                             <div class="col-sm-5">
-                                <button type="submit" class="button-round-secondary">BOOK SEAT</button>
+                                <button type="submit" class="button-round-secondary">Réserver dès maintenant</button>
                             </div>
                         </div>
                     </div>

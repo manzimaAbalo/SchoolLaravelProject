@@ -8,19 +8,19 @@
                     </figure>
                     <div class="skill-container">
                         <div class="skill-wrapper">
-                            <h6 class="skill-titile">Projets achevés</h6>
+                            <h6 class="skill-titile">Universités enregistrées</h6>
                             <div class="progress-wrapper">
-                                <div class="ab-progress example" data-progress data-value="92"></div>
+                                <div class="ab-progress example" data-progress data-value="80"></div>
                             </div>
                         </div>
                         <div class="skill-wrapper">
-                            <h6 class="skill-titile">Compétences financières</h6>
+                            <h6 class="skill-titile">Compétences techniques</h6>
                             <div class="progress-wrapper">
-                                <div class="ab-progress example" data-progress data-value="98"></div>
+                                <div class="ab-progress example" data-progress data-value="68"></div>
                             </div>
                         </div>
                         <div class="skill-wrapper">
-                            <h6 class="skill-titile">Fiable et travailleur</h6>
+                            <h6 class="skill-titile">Fiabilité des informations</h6>
                             <div class="progress-wrapper">
                                 <div class="ab-progress example" data-progress data-value="90"></div>
                             </div>
@@ -34,13 +34,13 @@
                                 </div>
                                 <div class="qualifaction-title">
                                     <h5>
-                                        Institut certifié
+                                        Plateforme certifiée
                                     </h5>
                                 </div>
                             </div>
                             <div class="qulifaction-detail">
                                 <p>
-                                    Lacinia asperiores incididunt saepe corrupti quos eros cupidatat faucibus natus.
+                                    Nous sommes une plateforme certifiée vous donnant les informations générales sur les universités du Togo.
                                 </p>
                             </div>
                         </div>
@@ -51,28 +51,28 @@
                                 </div>
                                 <div class="qualifaction-title">
                                     <h5>
-                                        Enseignants qualifiés
+                                        Informations vérifiées
                                     </h5>
                                 </div>
                             </div>
                             <div class="qulifaction-detail">
                                 <p>
-                                    Lacinia asperiores incididunt saepe corrupti quos eros cupidatat faucibus natus.
+                                    Toutes les informations dont vous disposez sur notre plateforme sont formellement correctes et vérifiées.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="about-btn">
-                        <a href="about.html" class="button-round-secondary">EN SAVOIR PLUS</a>
+                        <a href="{{route('about')}}" class="button-round-secondary">EN SAVOIR PLUS</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class=" about-right-content">
                     <div class="title-divider"></div>
-                    <h2 class="about-title">Pourquoi évaluer les écoles et découvrir les meilleures universités du Togo !</h2>
+                    <h2 class="about-title">Pourquoi évaluer les écoles et découvrir les meilleures universités du Togo ?</h2>
                     <p class="about-desc">
-                        SchoolRate TOGO offre une plateforme intuitive pour aider les étudiants à trouver les meilleures universités du Togo. Nous sommes déterminés à fournir des informations précises et objectives pour guider les choix éducatifs.
+                        SchoolRate TOGO offre une plateforme intuitive pour aider les étudiants à trouver les meilleures universités du Togo. Nous sommes déterminés à fournir des informations précises et objectives pour vous guider dans les choix éducatifs.
                     </p>
 
                     <figure class="figure-round-border">
