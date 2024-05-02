@@ -4,8 +4,8 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="title-divider"></div>
-                    <h2 class="section-title">Nos meilleurs classement</h2>
-                    <p class="course-section-info">Saepe quo labore aenean dictumst expedita commodi auctor, nisl, lorem iusto feugiat nemo reiciendis laboris.</p>
+                    <h2 class="section-title">Nos meilleurs classements</h2>
+                    <p class="course-section-info">Observer le classement des trois (03) meilleurs universités en fonctions des notations selon les criteres dont nous disposons.</p>
                 </div>
             </div>
             <div class="inner-course-wrap">
@@ -18,12 +18,12 @@
                                     <i aria-hidden="true" class="far fa-bookmark"></i>
                                 </a>
                                 <span class="cat-meta">
-                                    <a href="feature-course.html">Management</a>
+                                    <a href="feature-course.html">Droit Privés & Publics</a>
                                 </span>
                             </figure>
                             <div class="entry-content">
                                 <h4>
-                                    <a href="course-detail.html">The Complete Advance Management Study</a>
+                                    <a href="course-detail.html">Une formation complete et garantie</a>
                                 </h4>
                                 <div class="rating-content">
                                     <span class="rating-info">(4.5 ratings)</span>
@@ -37,15 +37,15 @@
                                     <figure class="author-img">
                                         <img src="/assets/img/educator-img21.jpg" alt="">
                                     </figure>
-                                    <h6 class="author-name">Prof. Sammy James</h6>
+                                    <h6 class="author-name">Espoir ABALO</h6>
                                 </div>
                                 <div class="entry-meta">
                                     <span class="student-number">
                                         <i aria-hidden="true" class="fas fa-user-friends"></i>
-                                        60+ students
+                                        150+ étudiants
                                     </span>
-                                    <a href="course-detail.html">
-                                        ENROLL COURSE
+                                    <a href="{{route('schools')}}">
+                                        VOIR PLUS
                                         <i aria-hidden="true" class="fas fa-long-arrow-alt-right"></i>
                                     </a>
                                 </div>
@@ -60,12 +60,12 @@
                                     <i aria-hidden="true" class="far fa-bookmark"></i>
                                 </a>
                                 <span class="cat-meta">
-                                    <a href="feature-course.html">Busniess</a>
+                                    <a href="feature-course.html">Informatique</a>
                                 </span>
                             </figure>
                             <div class="entry-content">
                                 <h4>
-                                    <a href="course-detail.html">Advance Begineer's Goal & Managing Course</a>
+                                    <a href="course-detail.html">Objectif du débutant et diversité des cours </a>
                                 </h4>
                                 <div class="rating-content">
                                     <span class="rating-info">(4 ratings)</span>
@@ -79,15 +79,15 @@
                                     <figure class="author-img">
                                         <img src="/assets/img/educator-img24.jpg" alt="">
                                     </figure>
-                                    <h6 class="author-name">Prof. Alison White</h6>
+                                    <h6 class="author-name">Natacha EGBAYI</h6>
                                 </div>
                                 <div class="entry-meta">
                                     <span class="student-number">
                                         <i aria-hidden="true" class="fas fa-user-friends"></i>
-                                        55+ students
+                                        300+ étudiants
                                     </span>
-                                    <a href="course-detail.html">
-                                        ENROLL COURSE
+                                    <a href="{{route('schools')}}">
+                                        VOIR PLUS
                                         <i aria-hidden="true" class="fas fa-long-arrow-alt-right"></i>
                                     </a>
                                 </div>
@@ -102,12 +102,12 @@
                                     <i aria-hidden="true" class="far fa-bookmark"></i>
                                 </a>
                                 <span class="cat-meta">
-                                    <a href="feature-course.html">Technology</a>
+                                    <a href="feature-course.html">Architecture</a>
                                 </span>
                             </figure>
                             <div class="entry-content">
                                 <h4>
-                                    <a href="course-detail.html">Advance Technology & Architecture Course</a>
+                                    <a href="course-detail.html">Cours avancés en ligne et en présentiel</a>
                                 </h4>
                                 <div class="rating-content">
                                     <span class="rating-info">(4.7 ratings)</span>
@@ -121,15 +121,15 @@
                                     <figure class="author-img">
                                         <img src="/assets/img/educator-img25.jpg" alt="">
                                     </figure>
-                                    <h6 class="author-name">Prof. George Hobbs</h6>
+                                    <h6 class="author-name">Kodjo AMEWOU</h6>
                                 </div>
                                 <div class="entry-meta">
                                     <span class="student-number">
                                         <i aria-hidden="true" class="fas fa-user-friends"></i>
-                                        40+ students
+                                        70+ étudiants
                                     </span>
-                                    <a href="course-detail.html">
-                                        ENROLL COURSE
+                                    <a href="{{route('schools')}}">
+                                        VOIR PLUS
                                         <i aria-hidden="true" class="fas fa-long-arrow-alt-right"></i>
                                     </a>
                                 </div>
@@ -139,7 +139,7 @@
                 </div>
             </div>
             <div class="course-bhn">
-                <a href="feature-course.html" class="button-round-primary">VIEW ALL COURSES</a>
+                <a href="{{route('rate')}}" class="button-round-primary">VOIR LES CLASSEMENTS</a>
             </div>
             <div class="overlay overlay-circle"></div>
             <div class="pattern-overlay"></div>

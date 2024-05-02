@@ -26,7 +26,6 @@ Route::group(['namespace' => "Frontend"],function () {
     Route::get('/classement', [FrontendController::class, 'rate'])->name('rate');
     Route::get('/login', [FrontendController::class, 'loginPage'])->name('login');
     Route::get('/register', [FrontendController::class, 'register'])->name('register');
-
     Route::post('register-user', [AuthController::class, 'registerUser'])->name('register.user');  
     Route::post('login', [AuthController::class, 'login']);
     

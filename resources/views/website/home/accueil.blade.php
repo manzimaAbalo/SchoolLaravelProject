@@ -28,7 +28,7 @@
                         <span class="counter">45</span>k+
                     </div>
                     <div class="Completed">
-                        Active Students
+                        Etudiants Actifs
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 counter-item">
@@ -36,7 +36,7 @@
                         <span class="counter">72</span>+
                     </div>
                     <div class="Completed">
-                        Faculty Courses
+                        Rendez-vous
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 counter-item">
@@ -44,15 +44,15 @@
                         <span class="counter">90</span>+
                     </div>
                     <div class="Completed">
-                        Best Professors
+                        Filières & Facultés
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 counter-item">
                     <div class="counter-no">
-                        <span class="counter">35</span>
+                        <span class="counter">60</span>+
                     </div>
                     <span class="Completed">
-                        Award Achieved
+                        Universités consultées
                     </span>
                 </div>
             </div>

@@ -12,7 +12,7 @@
                         <p>La meilleure plateforme de classement des universités du TOGO</p>
                     </div>
                     <div class="banner-button">
-                        <a href="#" class="button-round-secondary">En savoir plus</a>
+                        <a href="{{route('about')}}" class="button-round-secondary">En savoir plus</a>
                     </div>
                 </div>
             </div>
