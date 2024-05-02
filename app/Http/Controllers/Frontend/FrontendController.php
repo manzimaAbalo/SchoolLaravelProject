@@ -24,7 +24,7 @@ class FrontendController extends Controller
         return view('website.rate.classement');
     }
 
-    public function login(){
+    public function loginPage(){
         return view('website.auth.login');
     }
 
