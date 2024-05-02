@@ -1899,6 +1899,7 @@ input[type=submit]:focus {
   background-color: #41246D;
   width: 100%;
   z-index: 10;
+  padding-bottom: 20px;
 }
 
 /*--- top header css start ---*/
@@ -2820,8 +2821,8 @@ input[type=submit]:focus {
 }
 .home-banner .banner-content {
   margin-right: 30px;
-  padding-top: 15px;
-  padding-bottom: 120px;
+  padding-top: 5px;
+  padding-bottom: 150px;
 }
 @media screen and (max-width: 991px) {
   .home-banner .banner-content {

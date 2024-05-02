@@ -8,7 +8,7 @@
                             <a href="tel:+228 91 71 83 27"><i class="fas fa-phone-alt"></i> +228 91 71 83 27</a>
                         </li>
                         <li>
-                            <a href="https://mail.google.com/mail/u/0/#inbox"><i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="12717d7f62737c6b52767d7f737b7c3c717d7f">abalomanzima@gmail.com</span></a>
+                            <a href="mailto:abalomanzima@gmail.com" target="_blank"><i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="abalomanzima@gmail.com">abalomanzima@gmail.com</span></a>
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt"></i> 376 Bd de la Kara, Lomé
