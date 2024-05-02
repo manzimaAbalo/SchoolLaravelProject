@@ -17,77 +17,52 @@
 <div class="contact-page-section">
     <div class="container">
         
-        <div class="contact-form-inner">
+        <div class="contact-form-inner" >
             <div class="pattern-overlay zigzag-patten"></div>
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="contact-detail-container">
-                        <div class="section-head">
-                            <div class="title-divider"></div>
-                            <h2 class="section-title">Feel Free To Contact And Reach Us !</h2>
-                            <div class="section-disc">
-                                <p>Per sed, mattis. Integer viverra euismod maecenas incidunt, phasellus consequatur aliquam nihil temporibus in assumens deserunt.</p>
-                            </div>
-                        </div>
-                        <div class="contact-details-list">
-                            <ul>
-                                <li>
-                                    <span class="icon">
-                                        <i aria-hidden="true" class="icon icon-phone1"></i>
-                                    </span>
-                                    <div class="details-content">
-                                        <h5>Phone Number :</h5>
-                                        <span>Head-Office : (+011) 948-5481 //</span>
-                                        <span>Branch-Office : (+011) 948-56487</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="icon">
-                                        <i aria-hidden="true" class="icon icon-map-marker1"></i>
-                                    </span>
-                                    <div class="details-content">
-                                        <h5>Location Address :</h5>
-                                        <span>34th Bridge Road, San Francisco //</span>
-                                        <span>3th New Street Road, London</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="icon">
-                                        <i aria-hidden="true" class="icon icon-envelope3"></i>
-                                    </span>
-                                    <div class="details-content">
-                                        <h5>Email address :</h5>
-                                        <span><a href="https://demo.bosathemes.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="51353e3c30383f11323e3c21303f287f323e3c">[email&#160;protected]</a> //</span>
-                                        <span><a href="https://demo.bosathemes.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f49d9a929bab8c8d8eb4909b99959d9ada979b99">[email&#160;protected]</a></span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
+            <div class="row justify-content-center align-items-center w-100">
+                
+                <div class="col-lg-6" style="width: 900px">
                     <div class="contact-from-wrap">
+                        <div class="position-relative text-center my-4">
+                            <p class="mb-0 fs-4 px-3 d-inline-block bg-blue text-dark z-index-5 position-relative">
+                                REJOIGNEZ SCHOOLRATE POUR LE DEVELOPPEMENT EDUCATIF
+                            </p>
+                            <span class="border-bottom w-100  top-30 start-50 translate-middle"></span>
+                            <hr />
+                        </div>
                         <div class="pattern-overlay circle-patten"></div>
-                        <form class="contact-from">
+                        <form class="contact-from" action="{{ route('register.user') }}" method="POST" >
+                            @csrf
                             <p>
-                                <input type="text" name="name" placeholder="Enter Name*">
+                                <input type="text" name="nom" placeholder="Enter Name*">
                             </p>
                             <p>
-                                <input type="email" name="email" placeholder="Enter Email*">
+                                <input type="text" name="prenoms" placeholder="Entrez votre prénoms*">
                             </p>
                             <p>
-                                <input type="text" name="subject" placeholder="Enter Subject*">
+                                <input type="email" name="email" placeholder="Entrez votre adresse email*">
                             </p>
                             <p>
-                                <input type="number" name="name" placeholder="Enter Number*">
+                                <input type="number" name="name" placeholder="Entrez votre numéro de contact*">
+                            </p>
+                            <p>
+                                <input type="text" name="profession" placeholder="Entrez votre profession*">
+                            </p>
+                            <p>
+                                <input type="password" name="password" placeholder="Entrez votre mot de passe*">
                             </p>
                             <p class="width-full">
-                                <textarea rows="8" placeholder="Enter Message*"></textarea>
+                                <textarea rows="8" placeholder="Saisir votre adresse*"></textarea>
                             </p>
                             <p class="width-full">
-                                <input type="submit" name="submit" value="Submit Now">
+                                <input type="submit" class="btn btn-primary " name="submit" value="S'INSCRIRE MAINTENANT">
                             </p>
+                            <div class="width-full d-flex align-items-center">
+                                <p class="fs-6 mb-0 text-dark">Vous avez déjà un compte ?</p>
+                                <a class="text-primary fw-medium ms-2" href="{{ route('login') }}">Connectez-vous ici !</a>
+                            </div>
                         </form>
+                        @include('messages')
                     </div>
                 </div>
             </div>

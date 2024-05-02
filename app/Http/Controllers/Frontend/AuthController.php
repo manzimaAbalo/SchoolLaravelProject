@@ -1,80 +1,24 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\Controller;
-use App\Models\Comment;
-use App\Models\Note;
-use App\Models\Profile;
-use App\Models\Rule;
-use App\Models\School;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
-class AdminController extends Controller
+class AuthController extends Controller
 {
-    //
-
-    public function homePage()
-    {
-        return view('espace-admin.pages.dashboard.home');
-    }
-
-    public function schoolPage()
-    {
-        $schools = School::orderBy('created_at', 'desc')->paginate(10);
-        return view('espace-admin.pages.schools.school', [
-            'schools' => $schools,
-        ]);
-    }
-
-    public function rulePage()
-    {
-        $rules = Rule::orderBy('created_at', 'desc')->paginate(10);
-        return view('espace-admin.pages.rules.rule', [
-            'rules' => $rules
-        ]);
-    }
-
-    public function notePage()
-    {
-        $notes = Note::orderBy('created_at', 'desc')->paginate(10);
-        return view('espace-admin.pages.notes.note', [
-            'notes' => $notes
-        ]);
-    }
-
-    public function commentPage()
-    {
-        $comments = Comment::orderBy('created_at', 'desc')->paginate(10);
-        return view('espace-admin.pages.comments.comment', [
-            "comments" => $comments
-        ]);
-    }
-
-    public function usersPage()
-    {
-        $users = Profile::orderBy('created_at', 'desc')->paginate(10);
-        return view('espace-admin.pages.users.user', [
-            'users' => $users
-        ]);
-    }
-    public function loginPage()
-    {
-        return view('espace-admin.pages.auth.logindash');
-    }
-
-    public function login(Request $request)
-    {
+    public function login(Request  $request) {
+        $message = "";
         $message = "";
         try {
             $validate = Validator::make(
                 $request->all(),
                 [
-                    'email' => ['required', 'string', 'email', 'max:255'],
+                    'username' => ['required', 'string', 'max:255'],
                     'password' => ['required', 'string']
                 ],
                 [
@@ -87,7 +31,7 @@ class AdminController extends Controller
                 session()->flash("error", $validate->errors());
                 return redirect()->back()->withErrors(["Email ou Mot de passe incorrect"]);
             } else {
-                $user = User::where('email', $request->email)->first();
+                $user = User::where('email', $request->username)->orWhere('phone', $request->username)->first();
                 if (!isset($user)) {
                     $message = "Echec de connexion, Email ou mot de passe incorrecte ";
                     session()->flash("error", $message);
@@ -110,5 +54,9 @@ class AdminController extends Controller
             session()->flash("error",$th->getMessage());
             return redirect()->back();
         }
+    }
+
+    public function registerUser(Request $request){
+        
     }
 }

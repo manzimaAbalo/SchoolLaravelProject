@@ -12,6 +12,10 @@ class Rule extends Model
 
     protected $fillable = ["libelle", "min_note", "max_note", "category_rule_id"];
 
+    protected $with = [
+        'category_rule'
+    ];
+
     /**
      * Get the category_rule that owns the Rule
      *
