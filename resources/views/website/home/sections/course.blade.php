@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="title-divider"></div>
-                    <h2 class="section-title">Most Featured Courses</h2>
+                    <h2 class="section-title">Nos meilleurs classement</h2>
                     <p class="course-section-info">Saepe quo labore aenean dictumst expedita commodi auctor, nisl, lorem iusto feugiat nemo reiciendis laboris.</p>
                 </div>
             </div>

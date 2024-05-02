@@ -6,7 +6,7 @@
             <div class="service-content">
                 <div class="section-head">
                     <div class="title-divider"></div>
-                    <h2>Our Best Categories</h2>
+                    <h2>Top des filières</h2>
                     <div class="service-btn">
                         <a href="categories.html" class="button-round-primary">MORE CATEGORIES</a>
                     </div>

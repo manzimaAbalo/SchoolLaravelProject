@@ -21,17 +21,17 @@
 8. Main Header
 9. Home front section
 	* Home banner section
-	* Home About section  
-	* Home Blog section  
-	* Home Contact section  
-	* Home Course section  
-	* Home Fact section  
-	* Home Feature section  
-	* Home Goal section  
-	* Home Progress section  
-	* Home Service section  
-	* Home Team section  
-	* Home Testimonial section  
+	* Home About section
+	* Home Blog section
+	* Home Contact section
+	* Home Course section
+	* Home Fact section
+	* Home Feature section
+	* Home Goal section
+	* Home Progress section
+	* Home Service section
+	* Home Team section
+	* Home Testimonial section
 10. main Footer
 11. pages
 	* 404 Pages
@@ -57,7 +57,7 @@
 	* Shop Pages
 		*Product Right
 		*Product Detail
-		*Product Cart 
+		*Product Cart
 		*Product Checkout
 12. compatibility
     * Widget Siderbar
@@ -1184,7 +1184,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Default 
+>>> Default
 ----------------------------------------------------------------*/
 .semi-bold {
   font-weight: 600;
@@ -1893,7 +1893,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Main Header 
+>>> Main Header
 ----------------------------------------------------------------*/
 .site-header {
   background-color: #41246D;
@@ -2807,10 +2807,10 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Home Main section  
+>>> Home Main section
 ----------------------------------------------------------------*/
 /*--------------------------------------------------------------
->>> Home banner section  
+>>> Home banner section
 ----------------------------------------------------------------*/
 .home-banner {
   background-color: #41246D;
@@ -2820,8 +2820,8 @@ input[type=submit]:focus {
 }
 .home-banner .banner-content {
   margin-right: 30px;
-  padding-top: 32px;
-  padding-bottom: 160px;
+  padding-top: 15px;
+  padding-bottom: 120px;
 }
 @media screen and (max-width: 991px) {
   .home-banner .banner-content {
@@ -2878,7 +2878,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Home service section  
+>>> Home service section
 ----------------------------------------------------------------*/
 .home-service {
   margin: 110px 0;
@@ -3003,7 +3003,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Home about section  
+>>> Home about section
 ----------------------------------------------------------------*/
 .home-about-us {
   padding-top: 110px;
@@ -3138,7 +3138,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Home progress section  
+>>> Home progress section
 ----------------------------------------------------------------*/
 .home-progress-section {
   background-image: url(assets/img/educator-img12.jpg);
@@ -3209,7 +3209,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Home contact section  
+>>> Home contact section
 ----------------------------------------------------------------*/
 .contact-section {
   background-position: center center;
@@ -3255,7 +3255,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Home team section  
+>>> Home team section
 ----------------------------------------------------------------*/
 .home-team-section {
   padding: 110px 0;
@@ -3345,7 +3345,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Home fact section  
+>>> Home fact section
 ----------------------------------------------------------------*/
 .home-fact-section {
   margin-bottom: 130px;
@@ -3539,7 +3539,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Home testimonial section  
+>>> Home testimonial section
 ----------------------------------------------------------------*/
 .home-testimonial-section {
   margin: 110px 0;
@@ -3662,7 +3662,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Home blog section  
+>>> Home blog section
 ----------------------------------------------------------------*/
 .home-blog-section {
   margin-bottom: 110px;
@@ -3773,7 +3773,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Home feature section  
+>>> Home feature section
 ----------------------------------------------------------------*/
 .home-feature-section {
   margin-bottom: 135px;
@@ -3887,7 +3887,7 @@ input[type=submit]:focus {
   }
 }
 /*--------------------------------------------------------------
->>> Home goal section  
+>>> Home goal section
 ----------------------------------------------------------------*/
 .home-goal-section {
   background-color: #f8f8f8;
@@ -3950,7 +3950,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Home course section  
+>>> Home course section
 ----------------------------------------------------------------*/
 .home-course-section {
   padding: 110px 0 130px;
@@ -4138,7 +4138,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Main Footer  
+>>> Main Footer
 ----------------------------------------------------------------*/
 .site-footer {
   background-image: url(assets/img/educator-img12.jpg);
@@ -4397,7 +4397,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Inner Banner  
+>>> Inner Banner
 ----------------------------------------------------------------*/
 .inner-banner-wrap {
   margin-bottom: 110px;
@@ -4491,7 +4491,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> feature-course-page Page  
+>>> feature-course-page Page
 ----------------------------------------------------------------*/
 .feature-page-section {
   padding: 110px 0;
@@ -4593,7 +4593,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> portfolio-detail  
+>>> portfolio-detail
 ----------------------------------------------------------------*/
 .portfolio-detail-section {
   padding-bottom: 110px;
@@ -4821,7 +4821,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> About Page  
+>>> About Page
 ----------------------------------------------------------------*/
 .about-section {
   margin-bottom: 80px;
@@ -4966,7 +4966,7 @@ input[type=submit]:focus {
 /*--------------------------------------------------------------
 
 /*--------------------------------------------------------------
->>> Career Page  
+>>> Career Page
 ----------------------------------------------------------------*/
 .blog-archive {
   padding-top: 110px;
@@ -5101,7 +5101,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> single Page  
+>>> single Page
 ----------------------------------------------------------------*/
 .inner-banner-wrap .entry-meta {
   border-top: 1px solid rgba(217, 217, 217, 0.23);
@@ -5628,7 +5628,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> team Page  
+>>> team Page
 ----------------------------------------------------------------*/
 .team-detail-section {
   padding-bottom: 110px;
@@ -5874,7 +5874,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> career Page  
+>>> career Page
 ----------------------------------------------------------------*/
 .vacancy-container {
   margin-bottom: 80px;
@@ -6108,7 +6108,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> career detail Page  
+>>> career detail Page
 ----------------------------------------------------------------*/
 .career-detail-section {
   margin-bottom: 110px;
@@ -6268,7 +6268,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> course detail Page  
+>>> course detail Page
 ----------------------------------------------------------------*/
 .course-detail-section {
   position: relative;
@@ -6485,7 +6485,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Gallery Page  
+>>> Gallery Page
 ----------------------------------------------------------------*/
 .gallery-section {
   margin-bottom: 110px;
@@ -6545,7 +6545,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Team Page  
+>>> Team Page
 ----------------------------------------------------------------*/
 .team-page-section {
   background-color: #ffffff;
@@ -6558,7 +6558,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Testimonial Page  
+>>> Testimonial Page
 ----------------------------------------------------------------*/
 .testimonial-section-page {
   margin-bottom: 110px;
@@ -6580,7 +6580,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> FAQ Page  
+>>> FAQ Page
 ----------------------------------------------------------------*/
 .faq-page-container {
   padding-bottom: 110px;
@@ -6736,7 +6736,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Search Page  
+>>> Search Page
 ----------------------------------------------------------------*/
 .search-section .post {
   border: 1px solid #F5F5F5;
@@ -6893,7 +6893,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> 404 Page  
+>>> 404 Page
 ----------------------------------------------------------------*/
 .no-content-section {
   padding-top: 110px;
@@ -7000,7 +7000,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Comming soon Page  
+>>> Comming soon Page
 ----------------------------------------------------------------*/
 .comming-soon-section {
   background-size: cover;
@@ -7202,7 +7202,7 @@ input[type=submit]:focus {
 }
 
 /*--------------------------------------------------------------
->>> Contact Page  
+>>> Contact Page
 ----------------------------------------------------------------*/
 .contact-page-section {
   padding: 0 0 110px;
@@ -8588,7 +8588,7 @@ product slider range for price css
 }
 
 /*--------------------------------------------------------------
->>> Compatibility  
+>>> Compatibility
 ----------------------------------------------------------------*/
 .widget {
   margin-bottom: 20px;

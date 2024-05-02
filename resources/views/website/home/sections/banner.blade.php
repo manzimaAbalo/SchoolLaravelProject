@@ -1,7 +1,7 @@
-<section class="home-banner d-flex align-items-end">
+<section class="home-banner d-flex align-items-end ">
     <div class="container">
-        <div class="row align-items-end">
-            <div class=" banner-left col-md-6">
+        <div class="row align-items-end ">
+            <div class="banner-left col-md-6">
                 <div class="image-overlay pattern-overlay"></div>
                 <div class="banner-content">
                     <div class="title-divider"></div>
@@ -16,10 +16,10 @@
                     </div>
                 </div>
             </div>
-            <div class=" banner-right col-md-6">
-                <figure class="banner-img">
+            <div class="banner-right col-md-6 ml-5">
+                <figure class="banner-img" style="bottom: 50px;"> <!-- Ajustez la valeur de top selon votre besoin -->
                     <div class="image-overlay-oval pattern-overlay"></div>
-                    <img src="/assets/img/educator-img33.png" alt="">
+                    <img src="/assets/img/educator-img33.png" alt=""  >
                 </figure>
             </div>
         </div>

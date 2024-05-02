@@ -4,23 +4,23 @@
             <div class="col-md-6 ">
                 <div class="about-left-content">
                     <figure class="figure-round-border">
-                        <img src="/assets/img/educator-img13.jpg" alt="">
+                        <img src="/assets/img/student-img3.jpg" alt="">
                     </figure>
                     <div class="skill-container">
                         <div class="skill-wrapper">
-                            <h6 class="skill-titile">Completed Projects</h6>
+                            <h6 class="skill-titile">Projets achevés</h6>
                             <div class="progress-wrapper">
                                 <div class="ab-progress example" data-progress data-value="92"></div>
                             </div>
                         </div>
                         <div class="skill-wrapper">
-                            <h6 class="skill-titile">Financial Skills</h6>
+                            <h6 class="skill-titile">Compétences financières</h6>
                             <div class="progress-wrapper">
                                 <div class="ab-progress example" data-progress data-value="98"></div>
                             </div>
                         </div>
                         <div class="skill-wrapper">
-                            <h6 class="skill-titile">Relaible & Hardworking</h6>
+                            <h6 class="skill-titile">Fiable et travailleur</h6>
                             <div class="progress-wrapper">
                                 <div class="ab-progress example" data-progress data-value="90"></div>
                             </div>
@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="qualifaction-title">
                                     <h5>
-                                        Certified Institute
+                                        Institut certifié
                                     </h5>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@
                                 </div>
                                 <div class="qualifaction-title">
                                     <h5>
-                                        Qualifed Teachers
+                                        Enseignants qualifiés
                                     </h5>
                                 </div>
                             </div>
@@ -63,19 +63,20 @@
                         </div>
                     </div>
                     <div class="about-btn">
-                        <a href="about.html" class="button-round-secondary">MORE ABOUT US</a>
+                        <a href="about.html" class="button-round-secondary">EN SAVOIR PLUS</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class=" about-right-content">
                     <div class="title-divider"></div>
-                    <h2 class="about-title">Why Students Choose Us for Gaining Knowledge !</h2>
+                    <h2 class="about-title">Pourquoi évaluer les écoles et découvrir les meilleures universités du Togo !</h2>
                     <p class="about-desc">
-                        Per sed, mattis. Integer viverra euismod maecenas incidunt, phasellus consequatur aliquam nihil temporibus in assumens deserunt convallis. Inceptos per consectetur consequatur proin.
+                        SchoolRate TOGO offre une plateforme intuitive pour aider les étudiants à trouver les meilleures universités du Togo. Nous sommes déterminés à fournir des informations précises et objectives pour guider les choix éducatifs.
                     </p>
+
                     <figure class="figure-round-border">
-                        <img src="/assets/img/educator-img12-500px.jpg" alt="">
+                        <img src="/assets/img/student-img4.jpg" alt="">
                     </figure>
                 </div>
             </div>
