@@ -45,9 +45,7 @@
                                     <a class="text-primary fw-medium" href="authentication-forgot-password.html">Mot de
                                         passe oublié ?</a>
                                 </div>
-                                {{-- <button class="btn btn-primary w-100 py-8 mb-4 rounded-3">
-                                SE CONNECTER
-                            </button> --}}
+                                
                                 <input type="submit" class="btn btn-primary w-100 py-8 mb-4" name="submit"
                                     value="S'INSCRIRE MAINTENANT">
 
