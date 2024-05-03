@@ -1899,7 +1899,6 @@ input[type=submit]:focus {
   background-color: #41246D;
   width: 100%;
   z-index: 10;
-  padding-bottom: 20px;
 }
 
 /*--- top header css start ---*/
@@ -2814,69 +2813,69 @@ input[type=submit]:focus {
 >>> Home banner section
 ----------------------------------------------------------------*/
 .home-banner {
-    background-color: #41246D;
-    min-height: 720px;
-    position: relative;
-    z-index: 1;
-  }
+  background-color: #41246D;
+  min-height: 720px;
+  position: relative;
+  z-index: 1;
+}
+.home-banner .banner-content {
+  margin-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 120px;
+}
+@media screen and (max-width: 991px) {
   .home-banner .banner-content {
-    margin-right: 30px;
-    padding-top: 32px;
-    padding-bottom: 160px;
+    padding-bottom: 32px;
   }
-  @media screen and (max-width: 991px) {
-    .home-banner .banner-content {
-      padding-bottom: 32px;
-    }
+}
+@media screen and (max-width: 767px) {
+  .home-banner .banner-content {
+    margin-right: 0;
   }
-  @media screen and (max-width: 767px) {
-    .home-banner .banner-content {
-      margin-right: 0;
-    }
+}
+@media screen and (max-width: 575px) {
+  .home-banner .banner-content {
+    padding: 30px 0;
   }
-  @media screen and (max-width: 575px) {
-    .home-banner .banner-content {
-      padding: 30px 0;
-    }
+}
+.home-banner .banner-content .banner-title h1 {
+  color: #ffffff;
+}
+.home-banner .banner-content .banner-text p {
+  color: #f8f8f8;
+  margin-bottom: 35px;
+}
+.home-banner .banner-left,
+.home-banner .banner-right {
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 767px) {
+  .home-banner .banner-left .banner-img,
+.home-banner .banner-right .banner-img {
+    text-align: center;
   }
-  .home-banner .banner-content .banner-title h1 {
-    color: #ffffff;
-  }
-  .home-banner .banner-content .banner-text p {
-    color: #f8f8f8;
-    margin-bottom: 35px;
-  }
-  .home-banner .banner-left,
-  .home-banner .banner-right {
-    position: relative;
-    z-index: 1;
-  }
-  @media screen and (max-width: 767px) {
-    .home-banner .banner-left .banner-img,
-  .home-banner .banner-right .banner-img {
-      text-align: center;
-    }
-  }
-  .home-banner .image-overlay {
-    background-image: url(assets/img/educator-img4.png);
-    opacity: 0.1;
-    background-repeat: no-repeat;
-    background-position: top right;
-  }
-  .home-banner .image-overlay-oval {
-    background-image: url(assets/img/educator-img2.png);
-    opacity: 0.8;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-  }
-  .home-banner .overlay-image {
-    background-image: url(assets/img/educator-img5.png);
-    opacity: 0.5;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: 13% auto;
-  }
+}
+.home-banner .image-overlay {
+  background-image: url(assets/img/educator-img4.png);
+  opacity: 0.1;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.home-banner .image-overlay-oval {
+  background-image: url(assets/img/educator-img2.png);
+  opacity: 0.8;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.home-banner .overlay-image {
+  background-image: url(assets/img/educator-img5.png);
+  opacity: 0.5;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 13% auto;
+}
 
 /*--------------------------------------------------------------
 >>> Home service section
