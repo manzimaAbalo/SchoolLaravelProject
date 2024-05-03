@@ -34,8 +34,7 @@
                                 @csrf
                                 <div class="mb-3">
                                     <label for="username" class="form-label">Utilisateur</label>
-                                    <input type="text" class="form-control" name="username" id="username"
-                                        aria-describedby="emailHelp">
+                                    <input type="text" class="form-control" name="username" id="username"  aria-describedby="emailHelp">
                                 </div>
                                 <div class="mb-4">
                                     <label for="password" class="form-label">Mot de passe</label>
@@ -44,8 +43,8 @@
                                 <div class="d-flex align-items-center justify-content-between mb-4">
                                     <a class="text-primary fw-medium" href="#">Mot de passe oublié ?</a>
                                 </div>
-                                
-                                <input type="submit" class="btn btn-primary w-100 py-8 mb-4" name="submit" value="S'INSCRIRE MAINTENANT">
+
+                                <input type="submit" class="btn btn-primary w-100 py-8 mb-4" name="submit" value="SE CONNECTER">
 
                                 <div class="d-flex align-items-center">
                                     <p class="fs-6 mb-0 text-dark">Vous n'avez pas de compte ?</p>

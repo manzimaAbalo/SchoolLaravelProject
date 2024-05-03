@@ -16,7 +16,7 @@
                     </div>
                 </div>
             </div>
-            <div class="banner-right col-md-6 ml-5">
+            <div class="banner-right col-md-6 ">
                 <figure class="banner-img" style="bottom: 50px;"> <!-- Ajustez la valeur de top selon votre besoin -->
                     <div class="image-overlay-oval pattern-overlay"></div>
                     <img src="/assets/img/educator-img33.png" alt=""  >

@@ -1,4 +1,3 @@
-
 <header class="site-header site-header-transparent">
     <!-- header html start -->
     @include('website.layouts.topheader')
@@ -26,7 +25,6 @@
                             <li>
                                 <a href="{{route('schools')}}">Universités</a>
                             </li>
-
                             <li>
                                 <a href="{{route('rate')}}">Classements</a>
                             </li>
@@ -34,8 +32,12 @@
                     </nav>
                     <div class="header-btn d-inline-block d-xs-none"><!-- Ajout de la classe d-lg-none pour masquer les boutons sur les grands écrans -->
                         <div class="mobile-menu-btns"><!-- Création d'une div pour les boutons sur les petits écrans -->
-                            <a href="{{route('login')}}" class="button-round-secondary">Se connecter</a>
-                            <a href="{{route('register')}}" class="button-round-secondary">S'inscrire</a>
+                            @auth
+                                <a href="{{ route('dashboard') }}" class="button-round-secondary">{{ Auth::user()->name }}</a>
+                            @else
+                                <a href="{{ route('login') }}" class="button-round-secondary">Se connecter</a>
+                                <a href="{{ route('register') }}" class="button-round-secondary">S'inscrire</a>
+                            @endauth
                         </div>
                     </div>
                 </div>
@@ -44,4 +46,3 @@
     </div>
     <div class="mobile-menu-container"></div>
 </header>
-

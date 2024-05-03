@@ -8,7 +8,9 @@
                             <a href="tel:+228 91 71 83 27"><i class="fas fa-phone-alt"></i> +228 91 71 83 27</a>
                         </li>
                         <li>
-                            <a href="mailto:abalomanzima@gmail.com" target="_blank"><i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="abalomanzima@gmail.com">abalomanzima@gmail.com</span></a>
+                            <a href="mailto:abalomanzima@gmail.com" target="_blank"><i class="fas fa-envelope"></i> <span
+                                    class="__cf_email__"
+                                    data-cfemail="abalomanzima@gmail.com">abalomanzima@gmail.com</span></a>
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt"></i> 376 Bd de la Kara, Lomé
@@ -17,6 +19,12 @@
                 </div>
             </div>
             <div class="col-lg-4 d-flex justify-content-lg-end justify-content-between">
+                @auth
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: inline;">
+                        @csrf
+                        <button type="submit" class="button-round-secondary">Déconnexion</button>
+                    </form>
+                @endauth
                 <div class="header-social social-links">
                     <ul>
                         <li>
