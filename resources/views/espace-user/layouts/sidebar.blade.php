@@ -35,7 +35,7 @@
                         <span>
                             <i class="ti ti-article"></i>
                         </span>
-                        <span class="hide-menu">Universites</span>
+                        <span class="hide-menu">Universités</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
@@ -43,7 +43,7 @@
                         <span>
                             <i class="ti ti-alert-circle"></i>
                         </span>
-                        <span class="hide-menu">Criteres de notation</span>
+                        <span class="hide-menu">Critères de notation</span>
                     </a>
                 </li>
                 <li class="sidebar-item">

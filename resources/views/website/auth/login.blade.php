@@ -48,7 +48,7 @@
 
                                 <div class="d-flex align-items-center">
                                     <p class="fs-6 mb-0 text-dark">Vous n'avez pas de compte ?</p>
-                                    <a class="text-primary fw-medium ms-2" href="{{ route('login') }}">Créez en une ici</a>
+                                    <a class="text-primary fw-medium ms-2" href="{{ route('register') }}">Créez en un ici</a>
                                 </div>
                             </form>
                             @include('messages')

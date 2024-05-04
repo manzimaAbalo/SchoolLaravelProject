@@ -32,11 +32,11 @@ Route::group(['namespace' => "Frontend"],function () {
 
 });
 
-Route::group(['middleware'=>['auth']],function(){
-    Route::prefix('mon-espace')->group(function(){
-        Route::get('/dashboard',[CustomerController::class,'index'])->name('dashboard');
-    });
-});
+// Route::group(['middleware'=>['auth']],function(){
+//     Route::prefix('mon-espace')->group(function(){
+//         Route::get('/dashboard',[CustomerController::class,'index'])->name('dashboard');
+//     });
+// });
 
 require __DIR__.'/admin.php';
 require __DIR__.'/auth.php';
