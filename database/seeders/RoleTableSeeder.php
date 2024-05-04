@@ -3,8 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\Role;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class RoleTableSeeder extends Seeder
 {
@@ -13,6 +14,7 @@ class RoleTableSeeder extends Seeder
      */
     public function run(): void
     {
+        DB::table('roles')->truncate();
         $roles = [
             ['name'=>'ROOT'],
             ['name'=>'ADMIN'],

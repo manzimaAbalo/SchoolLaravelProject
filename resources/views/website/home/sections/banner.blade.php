@@ -6,7 +6,7 @@
                 <div class="banner-content">
                     <div class="title-divider"></div>
                     <div class="banner-title">
-                        <h1>Bienvenue sur SchoolRate TOGO</h1>
+                        <h1>BIENVENUE SUR SCHOOLRATE TOGO</h1>
                     </div>
                     <div class="banner-text">
                         <p>La meilleure plateforme de classement des universités du TOGO</p>
@@ -16,7 +16,7 @@
                     </div>
                 </div>
             </div>
-            <div class="banner-right col-md-6 ">
+            <div class="banner-right col-md-6">
                 <figure class="banner-img" style="bottom: 50px;"> <!-- Ajustez la valeur de top selon votre besoin -->
                     <div class="image-overlay-oval pattern-overlay"></div>
                     <img src="/assets/img/educator-img33.png" alt=""  >

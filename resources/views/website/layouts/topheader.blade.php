@@ -19,12 +19,7 @@
                 </div>
             </div>
             <div class="col-lg-4 d-flex justify-content-lg-end justify-content-between">
-                @auth
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: inline;">
-                        @csrf
-                        <button type="submit" class="button-round-secondary">Déconnexion</button>
-                    </form>
-                @endauth
+                
                 <div class="header-social social-links">
                     <ul>
                         <li>

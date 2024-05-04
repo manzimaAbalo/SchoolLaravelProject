@@ -13,7 +13,7 @@ class Rule extends Model
     protected $fillable = ["libelle", "min_note", "max_note", "category_rule_id"];
 
     protected $with = [
-        'category_rule'
+        'category'
     ];
 
     /**
@@ -21,7 +21,7 @@ class Rule extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function category_rule(): BelongsTo
+    public function category(): BelongsTo
     {
         return $this->belongsTo(CategoryRule::class, 'category_rule_id');
     }

@@ -5,8 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SchoolRate TOGO</title>
-    <link rel="shortcut icon" type="image/png" href="../admin/assets/images/logos/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="/admin/assets/images/logos/schoolrate.png" />
     <link rel="stylesheet" href="/admin/assets/css/styles.min.css" />
+    <!-- Datatable -->
+	<!-- --------------------------------------------------- -->
+	<link rel="stylesheet" href="{{ asset('/admin/dist/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css') }}">
 </head>
 
 <body>
@@ -17,11 +20,8 @@
         <!--  Main wrapper -->
         <div class="body-wrapper">
             @include('espace-admin.layouts.topheader')
-
             @yield('content')
-
             @include('espace-admin.layouts.footer')
-
         </div>
     </div>
     </div>
@@ -32,6 +32,8 @@
     <script src="/admin/assets/libs/apexcharts/dist/apexcharts.min.js"></script>
     <script src="/admin/assets/libs/simplebar/dist/simplebar.js"></script>
     <script src="/admin/assets/js/dashboard.js"></script>
+    <script src="/admin/dist/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+	<script src="/admin/dist/js/datatable/datatable-basic.init.js"></script>
 </body>
 
 </html>

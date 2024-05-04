@@ -19,6 +19,6 @@ class Sector extends Model
      */
     public function schools(): BelongsToMany
     {
-        return $this->belongsToMany(School::class, 'school_sectors', 'school_id', 'sector_id');
+        return $this->belongsToMany(School::class, 'school_sectors', 'sector_id', 'school_id')->withTimestamps();
     }
 }

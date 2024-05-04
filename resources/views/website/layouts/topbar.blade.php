@@ -34,6 +34,11 @@
                         <div class="mobile-menu-btns"><!-- Création d'une div pour les boutons sur les petits écrans -->
                             @auth
                                 <a href="{{ route('dashboard') }}" class="button-round-secondary">{{ Auth::user()->name }}</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: inline;">
+                                    @csrf
+                                    <button type="submit" class="button-round-secondary">Déconnexion</button>
+                                </form>
+
                             @else
                                 <a href="{{ route('login') }}" class="button-round-secondary">Se connecter</a>
                                 <a href="{{ route('register') }}" class="button-round-secondary">S'inscrire</a>
@@ -46,3 +51,12 @@
     </div>
     <div class="mobile-menu-container"></div>
 </header>
+<style>
+    .button-round-secondary {
+        /* Ajoutez ici les styles communs pour les deux boutons */
+        font-size: 16px; /* Par exemple */
+        padding: 10px 20px; /* Par exemple */
+        /* Autres styles communs */
+    }
+
+</style>

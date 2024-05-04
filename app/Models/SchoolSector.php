@@ -9,8 +9,13 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class SchoolSector extends Model
 {
     use HasFactory;
+    protected $table = "school_sectors";
 
     protected $fillable = ["school_id", "sector_id", "status"];
+    protected $with = [
+        'school',
+        'sector'
+    ];
 
     /**
      * Get the schools that owns the SchoolSector

@@ -33,7 +33,7 @@ class AdminController extends Controller
 
     public function rulePage()
     {
-        $rules = Rule::orderBy('created_at', 'desc')->paginate(10);
+        $rules = Rule::orderBy('created_at', 'desc')->with(['category'])->get();
         return view('espace-admin.pages.rules.rule', [
             'rules' => $rules
         ]);
@@ -41,7 +41,7 @@ class AdminController extends Controller
 
     public function notePage()
     {
-        $notes = Note::orderBy('created_at', 'desc')->paginate(10);
+        $notes = Note::orderBy('created_at', 'desc')->get();
         return view('espace-admin.pages.notes.note', [
             'notes' => $notes
         ]);
@@ -49,7 +49,7 @@ class AdminController extends Controller
 
     public function commentPage()
     {
-        $comments = Comment::orderBy('created_at', 'desc')->paginate(10);
+        $comments = Comment::orderBy('created_at', 'desc')->get();
         return view('espace-admin.pages.comments.comment', [
             "comments" => $comments
         ]);
@@ -57,9 +57,9 @@ class AdminController extends Controller
 
     public function usersPage()
     {
-        $users = Profile::orderBy('created_at', 'desc')->paginate(10);
+        $users = Profile::orderBy('created_at', 'desc')->get();
         return view('espace-admin.pages.users.user', [
-            'users' => $users
+            'profiles' => $users
         ]);
     }
     public function loginPage()

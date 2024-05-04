@@ -3,8 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\Sector;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class SectorTableSeeder extends Seeder
 {
@@ -13,6 +14,7 @@ class SectorTableSeeder extends Seeder
      */
     public function run(): void
     {
+        DB::table('sectors')->truncate();
         $sectors = [
             ['libelle' => 'Informatique'],
             ['libelle' => 'Génie civil'],

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\School;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -17,7 +18,10 @@ class FrontendController extends Controller
     }
 
     public function schoolPage(){
-        return view('website.schools.index');
+        $schools = School::orderBy('created_at', 'desc')->paginate(10);
+        return view('website.schools.index',[
+            'schools'=>$schools
+        ]);
     }
 
     public function rate(){
@@ -36,7 +40,7 @@ class FrontendController extends Controller
         $school_id = $request->school_id;
         return view('website.schools.details-school', [
             'school_id' => $school_id
-        ]); 
+        ]);
     }
 
 }

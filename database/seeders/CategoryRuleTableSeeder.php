@@ -6,6 +6,7 @@ use App\Models\CategoryRule;
 use App\Models\Rule;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CategoryRuleTableSeeder extends Seeder
 {
@@ -14,6 +15,9 @@ class CategoryRuleTableSeeder extends Seeder
      */
     public function run(): void
     {
+        DB::table('category_rules')->truncate();
+        DB::table('rules')->truncate();
+
         $categories = [
             ['name' => 'Accréditation et Réputation ', 'description' => ''], //1
             ['name' => "Qualité de l'Enseignement", 'description' => ''], //2
