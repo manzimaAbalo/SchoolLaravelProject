@@ -25,36 +25,93 @@
             </div>
         </div>
         <div class="card">
-            <form action="" method="post">
+            <form action="{{ route('office.schools.save') }}" method="post" enctype="multipart/form-data" >
+                @csrf
                 <div class="card-body">
                     <div class="row">
+                        <div class="col-md-12">
+                            <h4>Informations générales de l'école</h4>
+                        </div>
                         <div class="col-md-12 mb-3">
                             <div class="form-group">
                                 <label for="name">Nom de l'université</label>
-                                <input type="text" name="name" class="form-control" placeholder="Entrez le nom de l'école">
+                                <input type="text" name="name" class="form-control" value="{{ old('name') }}" placeholder="Entrez le nom de l'école">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="email">Email de l'université</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="site_web">@</span>
+                                <input type="email" name="email" class="form-control" value="{{ old('email') }}" placeholder="Entrez l'adresse mail de l'établissement">
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="form-group">
-                                <label for="name">Email de l'université</label>
-                                <input type="email" name="email" class="form-control">
+                                <label for="name">Contact de l'université</label>
+                                <input type="text" name="name" class="form-control" value="{{ old('contact') }}" placeholder="Entrez le numéro de contact de l'école" >
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="site_web">Site web de l'université</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="site_web">https://</span>
+                                <input type="url" name="site_web" class="form-control" value="{{ old('site_web') }}" placeholder="Site web de l'école" >
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                                <label for="address">Adresse de l'université</label>
+                                <input type="text" name="address" class="form-control" value="{{ old('address') }}" placeholder="Entrez le numéro de contact de l'école" >
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="form-group">
-                                <label for="name">Nom de l'université</label>
-                                <input type="text" name="name" class="form-control">
+                                <label for="address">Logo de l'université</label>
+                                <input type="file" name="logo" class="form-control" value="{{ old('logo') }}" placeholder="Entrez le numéro de contact de l'école" >
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="form-group">
-                                <label for="name">Nom de l'université</label>
-                                <input type="text" name="name" class="form-control">
+                                <label for="banner">Image bannière de l'université</label>
+                                <input type="file" name="banner" class="form-control" value="{{ old('banner') }}" placeholder="Entrez le numéro de contact de l'école" >
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3"></div>
-                        <div class="col-md-6 mb-3"></div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>Informations du responsable l'école</h4>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label for="responsable_nom">Nom du responsable de l'école</label>
+                                <input type="text" name="responsable_nom" class="form-control" value="{{ old('responsable_nom') }}" placeholder="Entrez le nom du responsable de l'école">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label for="responsable_nom">Prénoms du responsable de l'école</label>
+                                <input type="text" name="responsable_prenoms" class="form-control" value="{{ old('responsable_prenoms') }}" placeholder="Entrez le prenoms du responsable de l'école">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label for="responsable_email">Email de l'université</label>
+                                <input type="text" name="responsable_email" class="form-control" value="{{ old('responsable_email') }}" placeholder="Entrez l'adresse de l'école">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label for="responsable_phone">Téléphone du responsable de l'école</label>
+                                <input type="text" name="responsable_phone" class="form-control" value="{{ old('responsable_phone') }}" placeholder="Entrez le nom du responsable de l'école">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-md btn-primary">
+                        ENREGISTER
+                    </button>
+                    <a href="{{ route('office.schools') }}" class="btn btn-md btn-danger">ANNULER</a>
                 </div>
             </form>
         </div>
