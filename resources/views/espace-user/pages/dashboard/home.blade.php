@@ -1,4 +1,4 @@
-@extends('admin.layouts.main')
+@extends('espace-user.layouts.main')
 
 @section('content')
     <!-- container-fluid over -->
@@ -11,7 +11,7 @@
                             <div class="col-sm-7">
                                 <div class="d-flex align-items-center mb-7">
                                     <div class="rounded-circle overflow-hidden me-6">
-                                        <img src="/admin/dist/images/profile/user-1.jpg" alt="" width="40"
+                                        <img src="/user/dist/images/profile/user-1.jpg" alt="" width="40"
                                             height="40">
                                     </div>
                                     <h5 class="fw-semibold mb-0 fs-5">Bienvenue Admin !</h5>
@@ -432,7 +432,7 @@
                                         <td class="ps-0">
                                             <div class="d-flex align-items-center">
                                                 <div class="me-2 pe-1">
-                                                    <img src="/admin/dist/images/products/product-1.jpg"
+                                                    <img src="/user/dist/images/products/product-1.jpg"
                                                         class="rounded-2" width="48" height="48" alt="" />
                                                 </div>
                                                 <div>
@@ -459,7 +459,7 @@
                                         <td class="ps-0">
                                             <div class="d-flex align-items-center">
                                                 <div class="me-2 pe-1">
-                                                    <img src="/admin/dist/images/products/product-2.jpg"
+                                                    <img src="/user/dist/images/products/product-2.jpg"
                                                         class="rounded-2" width="48" height="48" alt="" />
                                                 </div>
                                                 <div>
@@ -486,7 +486,7 @@
                                         <td class="ps-0">
                                             <div class="d-flex align-items-center">
                                                 <div class="me-2 pe-1">
-                                                    <img src="/admin/dist/images/products/product-3.jpg"
+                                                    <img src="/user/dist/images/products/product-3.jpg"
                                                         class="rounded-2" width="48" height="48" alt="" />
                                                 </div>
                                                 <div>
@@ -514,7 +514,7 @@
                                         <td class="ps-0 border-bottom-0">
                                             <div class="d-flex align-items-center">
                                                 <div class="me-2 pe-1">
-                                                    <img src="/admin/dist/images/products/product-4.jpg"
+                                                    <img src="/user/dist/images/products/product-4.jpg"
                                                         class="rounded-2" width="48" height="48" alt="" />
                                                 </div>
                                                 <div>

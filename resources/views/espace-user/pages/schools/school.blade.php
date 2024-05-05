@@ -1,4 +1,4 @@
-@extends('admin.layouts.main')
+@extends('espace-user.layouts.main')
 
 @section('content')
     <div class="container-fluid">
