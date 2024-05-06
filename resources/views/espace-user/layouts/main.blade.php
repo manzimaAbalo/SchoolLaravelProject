@@ -42,7 +42,7 @@
 	<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-sidebartype="full"
 		data-sidebar-position="fixed" data-header-position="fixed">
 		<!-- --------------------------------------------------- -->
-		@include('espace-admin.layouts.sidebar')
+		@include('espace-user.layouts.sidebar')
 		<!-- --------------------------------------------------- -->
 		<!-- Main Wrapper -->
 		<!-- --------------------------------------------------- -->

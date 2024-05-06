@@ -16,29 +16,47 @@
                     <nav id="navigation" class="navigation d-none d-lg-inline-block">
                         <ul>
                             <li class="current-menu-item">
-                                <a href="{{route('accueil')}}">Accueil</a>
+                                <a href="{{ route('accueil') }}">Accueil</a>
                             </li>
                             <li>
-                                <a href="{{route('about')}}">A propos</a>
+                                <a href="{{ route('about') }}">A propos</a>
                             </li>
 
                             <li>
-                                <a href="{{route('schools')}}">Universités</a>
+                                <a href="{{ route('school') }}">Universités</a>
                             </li>
                             <li>
-                                <a href="{{route('rate')}}">Classements</a>
+                                <a href="{{ route('rate') }}">Classements</a>
                             </li>
                         </ul>
                     </nav>
-                    <div class="header-btn d-inline-block d-xs-none"><!-- Ajout de la classe d-lg-none pour masquer les boutons sur les grands écrans -->
+                    <div class="header-btn d-inline-block d-xs-none">
+                        <!-- Ajout de la classe d-lg-none pour masquer les boutons sur les grands écrans -->
                         <div class="mobile-menu-btns"><!-- Création d'une div pour les boutons sur les petits écrans -->
                             @auth
-                                <a href="{{ route('dashboard') }}" class="button-round-secondary">{{ Auth::user()->name }}</a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: inline;">
+                                <a href="{{ route('dashboard') }}"
+                                    class="button-round-secondary">{{ Auth::user()->name }}</a>
+
+
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Dropdown button
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    style="display: inline;">
+
+
                                     @csrf
                                     <button type="submit" class="button-round-secondary">Déconnexion</button>
                                 </form>
-
                             @else
                                 <a href="{{ route('login') }}" class="button-round-secondary">Se connecter</a>
                                 <a href="{{ route('register') }}" class="button-round-secondary">S'inscrire</a>
@@ -54,9 +72,10 @@
 <style>
     .button-round-secondary {
         /* Ajoutez ici les styles communs pour les deux boutons */
-        font-size: 16px; /* Par exemple */
-        padding: 10px 20px; /* Par exemple */
+        font-size: 16px;
+        /* Par exemple */
+        padding: 10px 20px;
+        /* Par exemple */
         /* Autres styles communs */
     }
-
 </style>

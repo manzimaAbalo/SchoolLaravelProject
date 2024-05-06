@@ -38,20 +38,10 @@ Route::group(['namespace' => "Frontend"],function () {
 //     });
 // });
 
-Route::get('/home', 'Customer\CustomerController@index')->name('index');
 
-Route::group(['namespace' => "Customer"], function(){
-    Route::get('/login', [CustomerController::class, 'login'])->name('login');
-    Route::get('/register', [CustomerController::class, 'register'])->name('register');
-    Route::get('/forgotpassword', [CustomerController::class, 'forgotpassword'])->name('forgotpassword');
-    Route::get('/comment', [CustomerController::class, 'comment'])->name('comment');
-    Route::get('/note', [CustomerController::class, 'note'])->name('note');
-    Route::get('/miseajour', [CustomerController::class, 'miseajour'])->name('miseajour');
-    Route::get('/school', [CustomerController::class, 'school'])->name('school');
-    Route::get('/user', [CustomerController::class, 'user'])->name('user');
-});
 
 require __DIR__.'/admin.php';
+require __DIR__.'/user.php';
 require __DIR__.'/auth.php';
 
 
