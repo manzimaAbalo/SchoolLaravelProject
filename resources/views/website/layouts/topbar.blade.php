@@ -23,7 +23,7 @@
                             </li>
 
                             <li>
-                                <a href="{{ route('school') }}">Universités</a>
+                                <a href="{{ route('schools') }}">Universités</a>
                             </li>
                             <li>
                                 <a href="{{ route('rate') }}">Classements</a>
@@ -34,29 +34,33 @@
                         <!-- Ajout de la classe d-lg-none pour masquer les boutons sur les grands écrans -->
                         <div class="mobile-menu-btns"><!-- Création d'une div pour les boutons sur les petits écrans -->
                             @auth
-                                <a href="{{ route('dashboard') }}"
-                                    class="button-round-secondary">{{ Auth::user()->name }}</a>
-
-
-                                <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        Dropdown button
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                {{-- <a href="{{ route('dashboard') }}" class="button-round-secondary">{{ Auth::user()->name }}</a> --}}
+                                <nav id="navigation" class="navigation d-none d-lg-inline-block">
+                                    <ul>
+                                        <li class="menu-item-has-children">
+                                            <a href="#" class="button-secondary">{{ Auth::user()->name }}</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="{{ route('espace-user.dashboard') }}">Profile</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ route('espace-user.notes') }}">Mes notes</a>
+                                                </li>
+                                                <li>
+                                                    <a href="product-cart.html">Commentaires</a>
+                                                </li>
+                                                <li>
+                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                        style="display: inline;">
+                                                        @csrf
+                                                        <button type="submit"
+                                                            class="button-primary">Déconnexion</button>
+                                                    </form>
+                                                </li>
+                                            </ul>
+                                        </li>
                                     </ul>
-                                </div>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                    style="display: inline;">
-
-
-                                    @csrf
-                                    <button type="submit" class="button-round-secondary">Déconnexion</button>
-                                </form>
+                                </nav>
                             @else
                                 <a href="{{ route('login') }}" class="button-round-secondary">Se connecter</a>
                                 <a href="{{ route('register') }}" class="button-round-secondary">S'inscrire</a>
