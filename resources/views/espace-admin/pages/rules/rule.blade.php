@@ -37,106 +37,49 @@
                             data-bs-placement="top" data-bs-title="Filter list"><i class="ti ti-filter"></i></a>
                     </div>
                     <div class="table-responsive border rounded">
-                        <table class="table align-middle text-nowrap mb-0">
+                        <table  id="zero_config" class="table align-middle text-nowrap mb-0">
                             <thead>
                                 <tr>
-                                    <th scope="col">Products</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Actions</th>
+                                    <th>ID</th>
+                                    <th scope="col">LIBELLE</th>
+                                    <th scope="col">CATEGORIE</th>
+                                    <th scope="col">NOTE MIN</th>
+                                    <th scope="col">NOTE MAX</th>
+                                    <th scope="col">ACTIONS</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-
-                                            <div class="ms-3">
-                                                <h6 class="fw-semibold mb-0 fs-4">How Innovation Works</h6>
-                                                <p class="mb-0">books</p>
+                                @foreach ($rules as $key=> $item)
+                                    <tr>
+                                        <td>
+                                            {{ ++$key }}
+                                        </td>
+                                        <td>
+                                            <p class="mb-0">{{ $item->libelle }}</p>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <span class="bg-success p-1 rounded-circle"></span>
+                                                <p class="mb-0 ms-2">{{ $item->category->name }}</p>
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <p class="mb-0">Thu, Jan 12 2023</p>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <span class="bg-success p-1 rounded-circle"></span>
-                                            <p class="mb-0 ms-2">InStock</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <h6 class="mb-0 fs-4">$275</h6>
-                                    </td>
-                                    <td><a class="fs-6 text-muted" href="javascript:void(0)" data-bs-toggle="tooltip"
-                                            data-bs-placement="top" data-bs-title="Edit"><i
-                                                class="ti ti-dots-vertical"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <div class="ms-3">
-                                                <h6 class="fw-semibold mb-0 fs-4">Psalms Book for Growth</h6>
-                                                <p class="mb-0">books</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <p class="mb-0">Thu, Jan 10 2023</p>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <span class="bg-danger p-1 rounded-circle"></span>
-                                            <p class="mb-0 ms-2">Out of Stock</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <h6 class="mb-0 fs-4">$89</h6>
-                                    </td>
-                                    <td><a class="fs-6 text-muted" href="javascript:void(0)" data-bs-toggle="tooltip"
-                                            data-bs-placement="top" data-bs-title="Edit"><i
-                                                class="ti ti-dots-vertical"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-
-                                            <div class="ms-3">
-                                                <h6 class="fw-semibold mb-0 fs-4">The Psychology of Money</h6>
-                                                <p class="mb-0">fashionbooks</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <p class="mb-0">Thu, Jan 12 2023</p>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <span class="bg-success p-1 rounded-circle"></span>
-                                            <p class="mb-0 ms-2">InStock</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <h6 class="mb-0 fs-4">$125</h6>
-                                    </td>
-                                    <td><a class="fs-6 text-muted" href="javascript:void(0)" data-bs-toggle="tooltip"
-                                            data-bs-placement="top" data-bs-title="Edit"><i
-                                                class="ti ti-dots-vertical"></i></a></td>
-                                </tr>
+                                        </td>
+                                        <td>
+                                            <h6 class="mb-0 fs-4">{{ $item->min_note }}</h6>
+                                        </td>
+                                        <td>
+                                            <h6 class="mb-0 fs-4">{{ $item->max_note }}</h6>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary" >
+                                                EDIT
+                                            </button>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                         <div class="d-flex align-items-center justify-content-end py-1">
-                            <p class="mb-0 fs-2">Rows per page:</p>
-                            <select class="form-select w-auto ms-0 ms-sm-2 me-8 me-sm-4 py-1 pe-7 ps-2 border-0"
-                                aria-label="Default select example">
-                                <option selected>5</option>
-                                <option value="1">10</option>
-                                <option value="2">25</option>
-                            </select>
-                            <p class="mb-0 fs-2">1–5 of 12</p>
-
+                            
                         </div>
                     </div>
 

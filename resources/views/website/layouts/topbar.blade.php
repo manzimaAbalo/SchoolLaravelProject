@@ -1,48 +1,5 @@
-{{-- <header class="site-header site-header-transparent">
-    <!-- header html start -->
-    @include('website.layouts.topheader')
-    <div class="bottom-header" id="masthead">
-        <div class="container">
-            <div class="hb-group d-flex align-items-center justify-content-between">
-                <div class="site-identity col-lg-3">
-                    <p class="site-title">
-                        <a href="/">
-                            <img src="/assets/img/educator-logo1.png" alt="logo">
-                        </a>
-                    </p>
-                </div>
-                <div class="main-navigation col-lg-9 justify-content-between d-flex align-items-center">
-                    <nav id="navigation" class="navigation d-none d-lg-inline-block">
-                        <ul>
-                            <li class="current-menu-item">
-                                <a href="{{route('accueil')}}">Accueil</a>
-                            </li>
-                            <li>
-                                <a href="{{route('about')}}">A propos</a>
-                            </li>
-
-                            <li>
-                                <a href="{{route('schools')}}">Universités</a>
-                            </li>
-
-                            <li>
-                                <a href="{{route('rate')}}">Classement</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="header-btn d-inline-block">
-                        <a href="{{route('login')}}" class="button-round-secondary">Se connecter</a>
-                        <a href="{{route('register')}}" class="button-round-secondary">S'inscrire</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="mobile-menu-container"></div>
-</header> --}}
 <header class="site-header site-header-transparent">
     <!-- header html start -->
-
     @include('website.layouts.topheader')
 
     <div class="bottom-header" id="masthead">
@@ -51,7 +8,7 @@
                 <div class="site-identity col-lg-3">
                     <p class="site-title">
                         <a href="/">
-                            <img src="/assets/img/educator-logo1.png" alt="logo">
+                            <img src="/assets/img/schoolrate.png" alt="logo">
                         </a>
                     </p>
                 </div>
@@ -59,25 +16,51 @@
                     <nav id="navigation" class="navigation d-none d-lg-inline-block">
                         <ul>
                             <li class="current-menu-item">
-                                <a href="{{route('accueil')}}">Accueil</a>
+                                <a href="{{ route('accueil') }}">Accueil</a>
                             </li>
                             <li>
-                                <a href="{{route('about')}}">A propos</a>
-                            </li>
-
-                            <li>
-                                <a href="{{route('schools')}}">Universités</a>
+                                <a href="{{ route('about') }}">A propos</a>
                             </li>
 
                             <li>
-                                <a href="{{route('rate')}}">Classements</a>
+                                <a href="{{ route('school') }}">Universités</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('rate') }}">Classements</a>
                             </li>
                         </ul>
                     </nav>
-                    <div class="header-btn d-inline-block d-xs-none"><!-- Ajout de la classe d-lg-none pour masquer les boutons sur les grands écrans -->
+                    <div class="header-btn d-inline-block d-xs-none">
+                        <!-- Ajout de la classe d-lg-none pour masquer les boutons sur les grands écrans -->
                         <div class="mobile-menu-btns"><!-- Création d'une div pour les boutons sur les petits écrans -->
-                            <a href="{{route('login')}}" class="button-round-secondary">Se connecter</a>
-                            <a href="{{route('register')}}" class="button-round-secondary">S'inscrire</a>
+                            @auth
+                                <a href="{{ route('dashboard') }}"
+                                    class="button-round-secondary">{{ Auth::user()->name }}</a>
+
+
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Dropdown button
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    style="display: inline;">
+
+
+                                    @csrf
+                                    <button type="submit" class="button-round-secondary">Déconnexion</button>
+                                </form>
+                            @else
+                                <a href="{{ route('login') }}" class="button-round-secondary">Se connecter</a>
+                                <a href="{{ route('register') }}" class="button-round-secondary">S'inscrire</a>
+                            @endauth
                         </div>
                     </div>
                 </div>
@@ -86,4 +69,13 @@
     </div>
     <div class="mobile-menu-container"></div>
 </header>
-
+<style>
+    .button-round-secondary {
+        /* Ajoutez ici les styles communs pour les deux boutons */
+        font-size: 16px;
+        /* Par exemple */
+        padding: 10px 20px;
+        /* Par exemple */
+        /* Autres styles communs */
+    }
+</style>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Customer\CustomerController;
 use App\Http\Controllers\Frontend\AuthController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\ProfileController;
@@ -22,17 +23,25 @@ Route::get('/', 'Frontend\FrontendController@accueil')->name('accueil');
 Route::group(['namespace' => "Frontend"],function () {
     Route::get('/a-propos', [FrontendController::class, 'aboutPage'])->name('about');
     Route::get('/universites', [FrontendController::class, 'schoolPage'])->name('schools');
-    Route::get('/universites/{school_id}/details', [FrontendController::class, 'schoolPageDetails'])->name('details');
+    Route::get('/universites/{school_id}/details', [FrontendController::class, 'schoolPageDetails'])->name('school.details');
     Route::get('/classement', [FrontendController::class, 'rate'])->name('rate');
     Route::get('/login', [FrontendController::class, 'loginPage'])->name('login');
     Route::get('/register', [FrontendController::class, 'register'])->name('register');
-    Route::post('register-user', [AuthController::class, 'registerUser'])->name('register.user');  
+    Route::post('register-user', [AuthController::class, 'registerUser'])->name('register.user');
     Route::post('login', [AuthController::class, 'login']);
-    
 
 });
 
+// Route::group(['middleware'=>['auth']],function(){
+//     Route::prefix('mon-espace')->group(function(){
+//         Route::get('/dashboard',[CustomerController::class,'index'])->name('dashboard');
+//     });
+// });
+
+
+
 require __DIR__.'/admin.php';
+require __DIR__.'/user.php';
 require __DIR__.'/auth.php';
 
 

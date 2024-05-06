@@ -16,11 +16,11 @@
 <!-- contact form html start -->
 <div class="contact-page-section">
     <div class="container">
-        
+
         <div class="contact-form-inner" >
             <div class="pattern-overlay zigzag-patten"></div>
             <div class="row justify-content-center align-items-center w-100">
-                
+
                 <div class="col-lg-6" style="width: 900px">
                     <div class="contact-from-wrap">
                         <div class="position-relative text-center my-4">
@@ -30,29 +30,30 @@
                             <span class="border-bottom w-100  top-30 start-50 translate-middle"></span>
                             <hr />
                         </div>
+                        @include('messages')
                         <div class="pattern-overlay circle-patten"></div>
                         <form class="contact-from" action="{{ route('register.user') }}" method="POST" >
                             @csrf
                             <p>
-                                <input type="text" name="nom" placeholder="Enter Name*">
+                                <input type="text" name="nom" placeholder="Entrez votre nom*" value="{{ old('name') }}" >
                             </p>
                             <p>
-                                <input type="text" name="prenoms" placeholder="Entrez votre prénoms*">
+                                <input type="text" name="prenoms" placeholder="Entrez votre prénoms*" value="{{ old('prenoms') }}">
                             </p>
                             <p>
-                                <input type="email" name="email" placeholder="Entrez votre adresse email*">
+                                <input type="email" name="email" placeholder="Entrez votre adresse email*" value="{{ old('email') }}">
                             </p>
                             <p>
-                                <input type="number" name="name" placeholder="Entrez votre numéro de contact*">
+                                <input type="number" name="phone" placeholder="Entrez votre numéro de contact*" value="{{ old('phone') }}">
                             </p>
                             <p>
-                                <input type="text" name="profession" placeholder="Entrez votre profession*">
+                                <input type="text" name="profession" placeholder="Entrez votre profession*" value="{{ old('profession') }}">
                             </p>
                             <p>
-                                <input type="password" name="password" placeholder="Entrez votre mot de passe*">
+                                <input type="password" name="password" placeholder="Entrez votre mot de passe*" value="{{ old('password') }}">
                             </p>
                             <p class="width-full">
-                                <textarea rows="8" placeholder="Saisir votre adresse*"></textarea>
+                                <textarea rows="8" name="address" placeholder="Saisir votre adresse*" value="{{ old('address') }}"></textarea>
                             </p>
                             <p class="width-full">
                                 <input type="submit" class="btn btn-primary " name="submit" value="S'INSCRIRE MAINTENANT">
@@ -62,7 +63,6 @@
                                 <a class="text-primary fw-medium ms-2" href="{{ route('login') }}">Connectez-vous ici !</a>
                             </div>
                         </form>
-                        @include('messages')
                     </div>
                 </div>
             </div>
@@ -70,5 +70,5 @@
     </div>
 </div>
 <!-- contact form html end -->
-    
+
 @endsection

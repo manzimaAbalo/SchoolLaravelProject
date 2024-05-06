@@ -12,6 +12,11 @@ class Comment extends Model
 
     protected $fillable = ["comment", "profile_id", "school_id"];
 
+    protected $with = [
+        'profile',
+        'school'
+    ];
+
     /**
      * Get the profile that owns the Comment
      *
