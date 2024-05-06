@@ -35,7 +35,7 @@
                         <form class="contact-from" action="{{ route('register.user') }}" method="POST" >
                             @csrf
                             <p>
-                                <input type="text" name="nom" placeholder="Entrez votre nom*" value="{{ old('name') }}" >
+                                <input type="text" name="nom" placeholder="Entrez votre nom*" value="{{ old('name') }}">
                             </p>
                             <p>
                                 <input type="text" name="prenoms" placeholder="Entrez votre prénoms*" value="{{ old('prenoms') }}">
