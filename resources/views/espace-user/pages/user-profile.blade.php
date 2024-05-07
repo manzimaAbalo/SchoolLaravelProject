@@ -80,8 +80,7 @@
                                             <div id="collapse-A" class="collapse show" data-bs-parent="#nav-tab-content"
                                                 role="tabpanel" aria-labelledby="heading-A">
                                                 <div class="card-body">
-                                                    <label for="password">Modifiez vos informations personnelles</label>
-                                                        <br>
+                                                    <h5>Modifiez vos informations personnelles</h5>
                                                         <br>
                                                 <div class="row">
                                                     <div class="col">
@@ -119,8 +118,10 @@
                                                     </div>
                                                 </div>
                                                 <br>
+                                                <div class="d-grid gap-2 col-6 mx-auto">
                                                     <input type="submit" class="#d63384" name="submit"
                                                         value="ENREGISTRER LES MODIFICATIONS">
+                                                </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -138,17 +139,18 @@
                                             <div id="collapse-B" class="collapse" data-bs-parent="#nav-tab-content"
                                                 role="tabpanel" aria-labelledby="heading-B">
                                                 <div class="card-body">
+                                                    <h5>Modifiez votre mot de passe</h5>
                                                     <div class="col">
-                                                        <label for="password">Modifiez votre mot de passe</label>
-                                                        <br>
                                                         <br>
                                                         <input type="password" name="password"
                                                             placeholder="Mot de passe"
                                                             value="{{ old('password') }}">
                                                     </div>
                                                     <br>
+                                                    <div class="d-grid gap-2 col-6 mx-auto">
                                                     <input type="submit" class="#d63384" name="submit"
                                                         value="ENREGISTRER LES MODIFICATIONS">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -166,7 +168,52 @@
                                             <div id="collapse-C" class="collapse" data-bs-parent="#nav-tab-content"
                                                 role="tabpanel" aria-labelledby="heading-C">
                                                 <div class="card-body">
-                                                    <h5>#Paramètres du compte</h5>
+                                                    <h5>Les paramètres du compte</h5>
+                                                    <div>
+                                                    <button type="button" style="text- " class="btn btn-secondary">
+                                                        Notifications <span class="badge bg-secondary">4</span>
+                                                      </button>
+                                                      </div>
+                                                      <br>
+                                                    <div class="mb-3">
+                                                        <h6>Langues</h6>
+                                                        <select id="disabledSelect" class="form-select">
+                                                          <option value="fr">Français</option>
+                                                          <option value="ang">Anglais</option>
+                                                          <option value="ch">Chinois</option>
+                                                          <option value="es">Espagnol</option>
+                                                          <option value="lt">Latin</option>
+                                                          <option value="rs">Russe</option>
+                                                        </select>
+                                                      </div>
+
+                                                      <div class="row">
+                                                        <h6 for="">Thème</h6>
+                                                        <label for="exampleColorInput" class="form-label">Par défaut du système | Sombre | Clair</label>
+                                                        <div style="text-align:center;">
+                                                        <input type="color" class="form-control form-control-color" id="exampleColorInput" 
+                                                            value="#FFFFFF" title="Choose your color">
+                                                        </div>
+                                                      </div>
+                                                      <br>
+                                                      
+                                                      <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                                        <h6>Activez la sauvegarde de vos informations : </h6>
+                                                        
+                                                        <div>
+                                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                                                        <label class="btn btn-outline-primary" for="btnradio1">Non</label>
+                                                      
+                                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                                        <label class="btn btn-outline-primary" for="btnradio2">Oui</label>
+                                                    </div>
+                                                      </div>
+                                                      <br>
+                                                      <br>
+                                                      <div class="d-grid gap-2 col-6 mx-auto">
+                                                        <input class="#d63384" type="submit" name="submit" value="ENREGISTRER LES MODIFICATIONS"/>
+                                                      </div>
+                                                      
                                                 </div>
                                             </div>
                                         </div>
