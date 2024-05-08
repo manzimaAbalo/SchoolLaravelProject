@@ -41,32 +41,37 @@ class FrontendController extends Controller
     {
         try {
             // Récupérer les règles depuis le cache ou la base de données
-            $rules = Cache::remember('rules', now()->addHours(24), function () {
-                return Rule::all();
-            });
+            // $rules = Cache::remember('rules', now()->addHours(24), function () {
+            //     return Rule::all();
+            // });
+            $rules = Rule::all();
 
             // Récupérer les catégories et leurs règles depuis le cache ou la base de données
-            $categories = Cache::remember('categories', now()->addHours(24), function () {
-                return CategoryRule::with(['rules'])->get();
-            });
+            // $categories = Cache::remember('categories', now()->addHours(24), function () {
+            //     return CategoryRule::with(['rules'])->get();
+            // });
+            $categories = CategoryRule::with(['rules'])->get();
 
             // Récupérer les écoles depuis le cache ou la base de données
-            $schools = Cache::remember('schools_with_notes', now()->addHours(24), function () {
-                return School::orderBy('created_at', 'desc')->with(['notes'])->get();
-            });
+            // $schools = Cache::remember('schools_with_notes', now()->addHours(24), function () {
+            //     return School::orderBy('created_at', 'desc')->with(['notes'])->get();
+            // });
+            $schools = School::orderBy('created_at', 'desc')->with(['notes'])->get();
 
             // Calculer la moyenne des notes pour chaque école
             foreach ($schools as $school) {
                 $totalNotes = 0;
                 foreach ($school->notes as $note) {
-                    $totalNotes += $note->value;
+                    $totalNotes += $note->note;
                 }
                 $average = count($school->notes) > 0 ? $totalNotes / count($school->notes) : 0;
+                // dd($average);
                 $school->average = $average;
             }
 
             // Trier les écoles par ordre décroissant de moyenne
             $sortedSchools = $schools->sortByDesc('average');
+            // dd($sortedSchools);
 
             return view('website.rate.classement', [
                 'rules' => $rules,
@@ -77,6 +82,51 @@ class FrontendController extends Controller
             // Gérer les erreurs éventuelles
         }
     }
+
+    public function rateByCategory(Request $request)
+    {
+        try {
+            // Récupérer les catégories et leurs règles depuis le cache ou la base de données
+            $categories = CategoryRule::with(['rules'])->get();
+            $selectedCategory = $request->input('category');
+            $category = CategoryRule::where('id',$selectedCategory)->first();
+
+            $query = School::orderBy('created_at', 'desc')->with(['notes']);
+            $schools = $query->get();
+
+            $notes = [];
+            foreach ($schools as $school) {
+                $totalNotes = 0;
+                foreach ($school->notes as $note) {
+                    if ($request->filled('category')) {
+                        if ($note->rule->category_rule_id == $selectedCategory ) {
+                            # on compte les notes de la même catégorie
+                            $totalNotes += $note->note;
+                            $notes[] = $note;
+                        }
+                    }else{
+                        $totalNotes += $note->note;
+                    }
+                }
+                $average = count($notes) > 0 ? $totalNotes / count($notes) : 0;
+                // dd($average);
+                $school->average = number_format($average,2);
+            }
+            // dd($notes);
+
+            // Trier les écoles par ordre décroissant de moyenne
+            $sortedSchools = $schools->sortByDesc('average');
+
+            return view('website.rate.classement', [
+                'schools' => $sortedSchools,
+                'categories' => $categories,
+                'category'=>$category
+            ]);
+        } catch (\Throwable $th) {
+            // Gérer les erreurs éventuelles
+        }
+    }
+
 
 
 
@@ -149,7 +199,6 @@ class FrontendController extends Controller
                         session()->flash("error", $message);
                         return redirect()->back();
                     }
-
                 }
             }
         } catch (\Throwable $th) {
