@@ -223,7 +223,7 @@ class SchoolTableSeeder extends Seeder
             [
                 'name' => "ESGIS TOGO",
                 'description' => "Ecole Supérieure de Gestion et d'Informatique du Togo",
-                'address' => "Lomé, Bè-Kpota",
+                'address' => "Lomé, Adidogomé",
                 'contact' => "22843434",
                 'email' => "esgis-togo@esgis.tg",
                 'site_web' => "esgis.tg",

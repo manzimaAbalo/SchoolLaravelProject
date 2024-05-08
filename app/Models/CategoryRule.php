@@ -18,8 +18,8 @@ class CategoryRule extends Model
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function rules(): HasMany
-    
+
     {
-        return $this->hasMany(Comment::class, 'category_rule_id', 'id');
+        return $this->hasMany(Rule::class, 'category_rule_id', 'id');
     }
 }

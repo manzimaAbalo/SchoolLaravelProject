@@ -41,10 +41,13 @@
                     <div class="col-md-8 col-lg-6 col-xxl-3" style="width: 470px">
                         <div class="card mb-0">
                             <div class="card-body">
-                                <a href="index.html" class="text-nowrap logo-img text-center d-block mb-5 w-100">
-                                    <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/dark-logo.svg"
-                                        width="180" alt="">
-                                </a>
+                                {{-- <a href="/" class="text-nowrap logo-img text-center d-block mb-5 w-100">
+                                    <img src="{{ asset('/assets/img/schoolrate.png') }}"  width="180" alt="">
+
+                                </a> --}}
+                                <h4 class="text-center">
+                                    SCHOOLRATE ADMIN
+                                </h4>
                                 <div class="position-relative text-center my-4">
                                     <p class="mb-0 fs-4 px-3 d-inline-block bg-white text-dark z-index-5 position-relative">
                                         CONNECTEZ VOUS A VOTRE ESPACE ADMIN

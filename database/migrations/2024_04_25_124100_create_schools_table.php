@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('schools', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description');
+            $table->text('description')->nullable();
             $table->string('address');
             $table->string('contact');
             $table->string('logo')->nullable();
@@ -22,9 +22,9 @@ return new class extends Migration
             $table->json('images')->nullable()->comment("[{name, path, ext, size}]");
             $table->string('email');
             $table->string('site_web');
-            $table->json('infrastructure')->comment("[category, items[]]");
+            $table->json('infrastructure')->comment("[category, items[]]")->nullable();
             $table->json('responsable')->comment("{nom, prenom, email}");
-            $table->json('localisation')->nullable()->comment("{long, lat}"); 
+            $table->json('localisation')->nullable()->comment("{long, lat}");
             $table->timestamps();
         });
     }
