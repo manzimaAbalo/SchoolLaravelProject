@@ -133,9 +133,8 @@
                                                     </a>
                                                 </h5>
                                             </div>
-                                            <div id="collapse-C" class="collapse" data-bs-parent="#nav-tab-content"
-                                                role="tabpanel" aria-labelledby="heading-C">
-
+                                            <div id="collapse-C" class="collapse" data-bs-parent="#nav-tab-content" role="tabpanel" aria-labelledby="heading-C">
+                                                
                                             </div>
                                         </div>
                                     </div>
