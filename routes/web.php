@@ -25,6 +25,7 @@ Route::group(['namespace' => "Frontend"],function () {
     Route::get('/universites', [FrontendController::class, 'schoolPage'])->name('schools');
     Route::get('/universites/{school_id}/details', [FrontendController::class, 'schoolPageDetails'])->name('school.details');
     Route::get('/classement', [FrontendController::class, 'rate'])->name('rate');
+    Route::get('/classement/category', [FrontendController::class, 'rateByCategory'])->name('rate.category');
     Route::get('/login', [FrontendController::class, 'loginPage'])->name('login');
     Route::get('/register', [FrontendController::class, 'register'])->name('register');
     Route::post('register-user', [AuthController::class, 'registerUser'])->name('register.user');
