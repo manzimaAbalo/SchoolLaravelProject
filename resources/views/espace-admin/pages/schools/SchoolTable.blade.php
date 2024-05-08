@@ -68,7 +68,7 @@
                                 <span class="usr-ph-no" data-phone="phone">{{ $item->contact }}</span>
                             </td>
                             <td>
-                                <span class="usr-ph-no" data-phone="responsable">{{ $item->responsable['nom'] }}</span>
+                                <span class="usr-ph-no" data-phone="responsable">{{ $item->responsable['responsable_nom'] }}</span>
                             </td>
                             <td>
                                 <div class="action-btn">

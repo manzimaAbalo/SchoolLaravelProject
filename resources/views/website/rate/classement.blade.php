@@ -18,18 +18,31 @@
             <div class="row">
                 <div class="col-lg-8 right-sidebar">
                     <div class="product-notices-wrapper">
-                        <p class="product-result-count">5 résultats affichés</p>
-                        <form method="get" id="categoryForm">
-                            <select name="orderby" id="categorySelect" class="orderby" aria-label="Shop order">
+                        <p class="product-result-count"> {{ $schools->count() }} résultats affichés</p>
+                        <form method="GET" id="" action="{{ route('rate.category') }}" >
+                            @csrf
+                            <select name="category" id="categorySelect" class="orderby" aria-label="Shop order">
                                 <option value="" selected="selected">Tri par défaut</option>
                                 @foreach ($categories as $item)
                                     <option value="{{ $item->id }}">{{ $item->name }}</option>
                                 @endforeach
                             </select>
+                            <button class="search-btn btn btn-primary" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
                         </form>
                     </div>
                     <div class="product-item-wrapper">
                         <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                @isset($category)
+
+                                    <div class="alert alert-success alert-dismissible bg-success text-white border-0 fade show" role="alert">
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        <strong>Catégorie : {{ $category->name }}</strong>
+                                    </div>
+                                @endisset
+                            </div>
                             @foreach ($schools as $key => $school)
                                 <div class="col-sm-6">
                                     <div class="product-item text-center">
@@ -40,14 +53,14 @@
                                             <span class="onsale">N° {{ $key + 1 }} </span>
                                         </figure>
                                         <div class="product-content">
-                                            <h4>{{ $school->name }}</h4>
+                                            <a href="{{ route('school.details', ['school_id' => $school->id]) }}" ><h4>{{ $school->name }}</h4></a>
                                             <div class="product-price">
-                                                <ins>Moyenne: {{ $school->average }}</ins><br>
+                                                <ins>Moyenne: {{ $school->average}}</ins><br>
                                                 {{-- <ins>Rank: {{ $key + 1 }}</ins><br> --}}
-                                                <ins>Total Notes: {{ $school->notes->count() }}</ins><br>
+                                                {{-- <ins>Total Notes: {{ $school->notes->count() }}</ins><br> --}}
                                                 <ins>Total Notants: {{ $school->notes->unique('user_id')->count() }}</ins>
                                             </div>
-                                            <a href="{{ route('school.details', ['school_id' => $school->id]) }}" class="button-round-secondary">Voir</a>
+                                            {{-- <a href="{{ route('school.details', ['school_id' => $school->id]) }}" class="button-round-secondary">Voir</a> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -60,7 +73,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 secondary">
+                {{-- <div class="col-lg-4 secondary">
                     <div class="sidebar">
                         <aside class="widget search_widget">
                             <form>
@@ -71,7 +84,7 @@
                             </form>
                         </aside>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
