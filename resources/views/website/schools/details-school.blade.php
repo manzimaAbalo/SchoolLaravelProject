@@ -134,7 +134,7 @@
                                                 </h5>
                                             </div>
                                             <div id="collapse-C" class="collapse" data-bs-parent="#nav-tab-content" role="tabpanel" aria-labelledby="heading-C">
-                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -168,14 +168,16 @@
                                     </li>
                                 </ul>
                                 @auth()
-                                    <div class="enroll-coures-btn">
-                                        <button id="btn_notation" class="button-round-primary">
-                                            Noter {{ $school->name }}
-                                        </button>
-                                        <button id="btn_close_notation" class="button-round-primary " style="display: none" >
-                                            Fermer la notation
-                                        </button>
-                                    </div>
+                                    @if (Auth::user()->role_id === 3)
+                                        <div class="enroll-coures-btn">
+                                            <button id="btn_notation" class="button-round-primary">
+                                                Noter {{ $school->name }}
+                                            </button>
+                                            <button id="btn_close_notation" class="button-round-primary " style="display: none" >
+                                                Fermer la notation
+                                            </button>
+                                        </div>
+                                    @endif
                                 @endauth
                             </div>
                             {{-- <div class="widget widget-bg widget-post-thumb">
