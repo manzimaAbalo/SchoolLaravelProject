@@ -27,6 +27,7 @@
             <div class="d-flex w-100">
                 <div class="d-flex w-100">
                     <div class="w-100">
+                        @include('messages')
                         <div class="chat-container h-100 w-100">
                             <div class="app-chat">
                                 <ul class="chat-users" style="height: calc(100vh - 100px)" data-simplebar>
@@ -46,10 +47,29 @@
                                                     <h6 class="fw-semibold text-dark">{{ $item->comment }}</h6>
                                                     <div class="d-flex align-items-center justify-content-between">
                                                         <div class="d-flex align-items-center">
-                                                            <span><i class="ti ti-star fs-4 me-2 text-dark"></i></span>
-                                                            <span class="d-block"><i class="ti ti-alert-circle text-muted"></i></span>
+                                                            {{-- <span><i class="ti ti-star fs-4 me-2 text-dark"></i></span> --}}
+                                                            <form id="updateCommentForm_{{ $item->id }}" action="{{ route('office.comments.update') }}" method="POST">
+                                                                @csrf
+                                                                <input type="hidden" name="comment_id" value="{{ $item->id }}">
+
+                                                                @if ($item->status == 1)
+                                                                    <input type="hidden" name="status" value="0">
+                                                                    <button type="submit" class="btn btn-danger ">
+                                                                        <span class="d-block"><i class="ti ti-archive text-error"></i>Archiver</span>
+                                                                    </button>
+                                                                @else
+                                                                    <!-- Sinon, affichez une icône grise -->
+                                                                    <input type="hidden" name="status" value="1">
+                                                                    <button type="submit" class="btn btn-success">
+                                                                        <span class="d-block"><i class="ti ti-check text-success"></i>Activer</span>
+                                                                    </button>
+                                                                @endif
+                                                            </form>
                                                         </div>
-                                                        <p class="mb-0 fs-2 text-muted">{{ $item->created_at->diffForHumans() }}</p>
+                                                        <p class="mb-0 fs-2 text-muted">
+                                                            {{ $item->created_at->locale('fr')->diffForHumans() }}
+                                                        </p>
+
                                                     </div>
                                                 </div>
                                             </a>

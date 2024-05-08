@@ -46,7 +46,7 @@
                             </td>
                             <td>
                                 <div class="d-flex align-items-center">
-                                    <img src="/admin/dist/images/profile/user-1.jpg" alt="avatar"
+                                    <img src="/uploads/schools/logo/{{ $item->logo }}" alt="avatar"
                                         class="rounded-circle" width="35" />
                                     <div class="ms-3">
                                         <div class="user-meta-info">
@@ -58,8 +58,7 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="usr-email-addr"
-                                    data-email="adams@mail.com">{{ $item->email }}</span>
+                                <span class="usr-email-addr"  data-email="adams@mail.com">{{ $item->email }}</span>
                             </td>
                             <td>
                                 <span class="usr-location" data-location="address">{{ $item->address }}</span>
@@ -75,7 +74,7 @@
                                     <a href="javascript:void(0)" class="text-info edit">
                                         <i class="ti ti-eye fs-5"></i>
                                     </a>
-                                    <a href="javascript:void(0)" class="text-dark delete ms-2">
+                                    <a href="{{ route('office.schools.edit', ['school_id'=>$item->id]) }}" class="text-primary edit ms-2">
                                         <i class="ti ti-edit fs-5"></i>
                                     </a>
                                 </div>

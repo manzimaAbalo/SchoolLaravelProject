@@ -143,7 +143,11 @@ class FrontendController extends Controller
     public function schoolPageDetails(Request $request)
     {
         $school_id = $request->school_id;
-        $school = School::where('id', $school_id)->with(['comments'])->first();
+        $school = School::where('id', $school_id)->with([
+            'comments'=>function($query){
+                $query->where('status',1);
+            }
+        ])->first();
         $categories = CategoryRule::orderBy('created_at', 'desc')->with(['rules'])->get();
         return view('website.schools.details-school', [
             'school_id' => $school_id,
