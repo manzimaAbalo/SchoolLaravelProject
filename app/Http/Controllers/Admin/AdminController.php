@@ -111,4 +111,31 @@ class AdminController extends Controller
             return redirect()->back();
         }
     }
+
+    public function changeCommentStatus(Request $request){
+        $message = "";
+        try {
+            $validate = Validator::make($request->all(),[
+                'status'=> 'required|in:0,1',
+                'comment_id'=> 'required|exists:comments,id'
+            ]);
+            if ($validate->fails()) {
+                $message = "Veuillez entrez de données correctes";
+                session()->flash("error", $validate->errors());
+                return redirect()->back();
+            }else{
+                $status = $request->status;
+                $comment_id = $request->comment_id;
+                $comment = Comment::find($comment_id);
+                $comment->status = $status;
+                $comment->save();
+                $message = "Le status du commentaire a été modifié avec succès";
+                session()->flash("success", $message);
+                return redirect()->back();
+            }
+        } catch (\Throwable $th) {
+            session()->flash("error",$th->getMessage());
+            return redirect()->back();
+        }
+    }
 }
