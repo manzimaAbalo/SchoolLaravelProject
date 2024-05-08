@@ -44,9 +44,10 @@
                                                     <img src="assets/img/educator-img23.jpg" alt="">
                                                 </figure>
                                                 <div>
-                                                    <h6 class="author-name">{{ $school->responsable['responsable_nom'] }}
-                                                        {{ $school->responsable['responsable_prenoms'] }}</h6>
-                                                    <span class="tag-discription">Responsable</span>
+                                                    @if (array_key_exists('responsable_nom', $school->responsable) && array_key_exists('responsable_prenoms', $school->responsable))
+                                                        <h6 class="author-name">{{ $school->responsable['responsable_nom'] }} {{ $school->responsable['responsable_prenoms'] }}</h6>
+                                                        <span class="tag-discription">Responsable</span>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -54,14 +55,6 @@
                                             <span>Email:</span>
                                             <h5>{{ $school->email }}</h5>
                                         </div>
-                                        {{-- <div class="col-md-2 text-center pink-border">
-                                        <span>20 Note :</span>
-                                        <div class="rating-start-wrap">
-                                            <div class="rating-start">
-                                                <span style="width: 80%"></span>
-                                            </div>
-                                        </div>
-                                    </div> --}}
                                         <div class="col-md-4 text-center pink-border">
                                             <span>Contact :</span>
                                             <h3>{{ $school->contact }}</h3>
