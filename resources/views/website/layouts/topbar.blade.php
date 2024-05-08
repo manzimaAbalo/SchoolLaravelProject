@@ -52,7 +52,7 @@
                                                 <li>
                                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: inline;">
                                                         @csrf
-                                                        <button type="submit"  class="button-primary">Déconnexion</button>
+                                                        <button type="submit" class="btn btn-outline-primary mx-3 mt-2 d-block">Se Déconnecter</button>
                                                     </form>
                                                 </li>
                                             </ul>
