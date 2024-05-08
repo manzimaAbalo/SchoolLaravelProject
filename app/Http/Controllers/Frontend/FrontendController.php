@@ -124,25 +124,32 @@ class FrontendController extends Controller
                     session()->flash("error", $message);
                     return redirect()->back();
                 } else {
-                    $profile = Profile::where('user_id', $user->id)->first();
-                    DB::beginTransaction();
-                    $comment = Comment::create([
-                        'profile_id' => $profile->id,
-                        'school_id' => $school_id,
-                        'comment' => $request->comment,
-                    ]);
-                    if ($comment == null) {
-                        DB::rollBack();
-                        $message = "Echec, une erreur est survenue, veuillez réessayez !";
-                        session()->flash("error", $message);
-                        return redirect()->back()->withErrors(["Echec, veuillez remplir tous les champs"]);
+                    if ($user->role_id == 3) {
+                        $profile = Profile::where('user_id', $user->id)->first();
+                        DB::beginTransaction();
+                        $comment = Comment::create([
+                            'profile_id' => $profile->id,
+                            'school_id' => $school_id,
+                            'comment' => $request->comment,
+                        ]);
+                        if ($comment == null) {
+                            DB::rollBack();
+                            $message = "Echec, une erreur est survenue, veuillez réessayez !";
+                            session()->flash("error", $message);
+                            return redirect()->back()->withErrors(["Echec, veuillez remplir tous les champs"]);
+                        } else {
+                            # save comment for school
+                            DB::commit();
+                            $message = "votre commentaire a été enrégistré avec succès";
+                            session()->flash("success", $message);
+                            return redirect()->back();
+                        }
                     } else {
-                        # save comment for school
-                        DB::commit();
-                        $message = "votre commentaire a été enrégistré avec succès";
-                        session()->flash("success", $message);
+                        $message = "Echec, Vous n'êtes pas abileté a commenter cette page svp ..!";
+                        session()->flash("error", $message);
                         return redirect()->back();
                     }
+
                 }
             }
         } catch (\Throwable $th) {
@@ -178,39 +185,46 @@ class FrontendController extends Controller
                     session()->flash("error", $message);
                     return redirect()->back();
                 } else {
-                    DB::beginTransaction();
-                    $notes = $request->notes;
-                    $data = [];
-                    $school_id = $request->school_id;
-                    $profile = Profile::where('user_id', $user->id)->first();
-                    foreach ($notes as $key => $note) {
-                        if (isset($note['rule_id']) && isset($note['note'])) {
-                            # Vérifier si l'utilisateur actuel n'a pas déjà attribué de note à un même critère pour une même école ..
-                            $check_note_exist = Note::where('rule_id', $note['rule_id'])->where('school_id', $school_id)->where('profile_id', $profile->id)->first();
-                            if ($check_note_exist == null) { //sinon nouvelle note
-                                $data[] = [
-                                    'rule_id' => $note['rule_id'],
-                                    'note' => $note['note'],
-                                    'school_id' => $school_id,
-                                    'profile_id' => $profile->id
-                                ];
+                    if ($user->role_id == 3) {
+                        DB::beginTransaction();
+                        $notes = $request->notes;
+                        $data = [];
+                        $school_id = $request->school_id;
+                        $profile = Profile::where('user_id', $user->id)->first();
+
+                        foreach ($notes as $key => $note) {
+                            if (isset($note['rule_id']) && isset($note['note'])) {
+                                # Vérifier si l'utilisateur actuel n'a pas déjà attribué de note à un même critère pour une même école ..
+                                $check_note_exist = Note::where('rule_id', $note['rule_id'])->where('school_id', $school_id)->where('profile_id', $profile->id)->first();
+                                if ($check_note_exist == null) { //sinon nouvelle note
+                                    $data[] = [
+                                        'rule_id' => $note['rule_id'],
+                                        'note' => $note['note'],
+                                        'school_id' => $school_id,
+                                        'profile_id' => $profile->id
+                                    ];
+                                }
                             }
                         }
-                    }
-                    $school = School::where('id', $request->school_id)->first();
+                        $school = School::where('id', $request->school_id)->first();
 
-                    $schoolNote = $school->notes()->createMany($data);
+                        $schoolNote = $school->notes()->createMany($data);
 
-                    if ($schoolNote == null) {
-                        DB::rollBack();
-                        $message = "Echec, une erreur est survenue, veuillez réessayez !";
-                        session()->flash("error", $message);
-                        return redirect()->back();
+                        if ($schoolNote == null) {
+                            DB::rollBack();
+                            $message = "Echec, une erreur est survenue, veuillez réessayez !";
+                            session()->flash("error", $message);
+                            return redirect()->back();
+                        } else {
+                            # save comment for school
+                            DB::commit();
+                            $message = "Vos notes ont été attribué avec succès";
+                            session()->flash("success", $message);
+                            return redirect()->back();
+                        }
                     } else {
-                        # save comment for school
-                        DB::commit();
-                        $message = "Vos notes ont été attribué avec succès";
-                        session()->flash("success", $message);
+                        $message = "Echec, Seul un utilisateur autorisé peut attribuer une note !";
+                        session()->flash("error", $message);
                         return redirect()->back();
                     }
                 }
