@@ -30,6 +30,10 @@ Route::group(['namespace' => "Frontend"],function () {
     Route::post('register-user', [AuthController::class, 'registerUser'])->name('register.user');
     Route::post('login', [AuthController::class, 'login']);
 
+    Route::post('/schools/add-comment',[FrontendController::class, 'add_school_comment'])->name('school.comment.save');
+    Route::post('/schools/add-notation',[FrontendController::class, 'add_school_notation'])->name('school.notation.add');
+
+
 });
 
 // Route::group(['middleware'=>['auth']],function(){

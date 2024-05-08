@@ -27,7 +27,15 @@
         <div class="card">
             <form action="{{ route('office.schools.save') }}" method="post" enctype="multipart/form-data" >
                 @csrf
+                <div class="card-header bg-primary">
+                    <div class="card-title text-white">Formulaire de création d'une école</div>
+                </div>
                 <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            @include('messages')
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-md-12">
                             <h4>Informations générales de l'école</h4>
@@ -47,8 +55,8 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="form-group">
-                                <label for="name">Contact de l'université</label>
-                                <input type="text" name="name" class="form-control" value="{{ old('contact') }}" placeholder="Entrez le numéro de contact de l'école" >
+                                <label for="contact">Contact de l'université</label>
+                                <input type="text" name="contact" class="form-control" value="{{ old('contact') }}" placeholder="Entrez le numéro de contact de l'école" >
                             </div>
                         </div>
                         <div class="col-md-12 mb-3">
@@ -66,7 +74,7 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="form-group">
-                                <label for="address">Logo de l'université</label>
+                                <label for="logo">Logo de l'université</label>
                                 <input type="file" name="logo" class="form-control" value="{{ old('logo') }}" placeholder="Entrez le numéro de contact de l'école" >
                             </div>
                         </div>
@@ -105,6 +113,26 @@
                                 <input type="text" name="responsable_phone" class="form-control" value="{{ old('responsable_phone') }}" placeholder="Entrez le nom du responsable de l'école">
                             </div>
                         </div>
+                        <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                                <label for="description">Description de l'école</label>
+                                <textarea name="description" id="description" class="form-control" placeholder="Entrez une brève description de l'école" >
+                                    {{ old('description') }}
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>Infrastructures l'école</h4>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="infrastructures"></label>
+                            <div id="infrastructures">
+                                <!-- Champs dynamiques seront ajoutés ici -->
+                            </div>
+                            <button type="button" class="btn btn-sm btn-primary mt-2" onclick="addInfrastructureField()">Ajouter une infrastructure</button>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -116,4 +144,73 @@
             </form>
         </div>
     </div>
+
+
+    {{-- <script>
+        function addInfrastructureField() {
+            const infrastructuresDiv = document.getElementById('infrastructures');
+            const newField = document.createElement('div');
+            newField.classList.add('card', 'mb-3');
+
+            newField.innerHTML = `
+                <div class="card-header bg-primary ">
+                    <h5 class="card-title text-white">Catégorie : <span class="category-value"></span></h5>
+                    <button type="button" class="btn btn-sm btn-danger float-end" onclick="removeInfrastructure(this)">Supprimer</button>
+                    <button type="button" class="btn btn-sm btn-secondary float-end" onclick="addInfrastructureItem(this)">Ajouter un item</button>
+                </div>
+                <div class="card-body">
+                    <div class="mb-2">
+                        <label for="category">Catégorie</label>
+                        <select name="category[]" class="form-control" onchange="updateCategoryValue(this)">
+                            <option value="">Choisir une catégorie</option>
+                            <option value="Bâtiment">Bâtiment</option>
+                            <option value="TIC">TIC</option>
+                            <option value="Restauration">Restauration</option>
+                            <option value="Installations Sportives">Installations Sportives</option>
+                        </select>
+                    </div>
+                    <div class="mb-2">
+                        <label for="items">Items</label>
+                        <input type="text" name="items[]" class="form-control" placeholder="Entrez les éléments">
+                    </div>
+                </div>
+            `;
+
+            infrastructuresDiv.appendChild(newField);
+        }
+
+        function addInfrastructureItem(button) {
+            const cardBody = button.parentElement.nextElementSibling;
+            const itemsDiv = document.createElement('div');
+            itemsDiv.classList.add('mb-2');
+
+            itemsDiv.innerHTML = `
+                <input type="text" name="items[]" class="form-control mt-2" placeholder="Entrez un élément">
+                <button type="button" class="btn btn-sm btn-danger mt-2" onclick="removeItem(this)">Supprimer</button>
+            `;
+
+            cardBody.appendChild(itemsDiv);
+        }
+
+        function removeItem(button) {
+            button.parentElement.remove();
+        }
+
+        function updateCategoryValue(selectElement) {
+            const cardHeader = selectElement.closest('.card').querySelector('.card-header .category-value');
+            if (cardHeader) {
+                cardHeader.textContent = selectElement.value;
+            }
+        }
+
+        function removeInfrastructure(button) {
+            button.closest('.card').remove();
+        }
+    </script> --}}
+
+    <script src="{{ asset('/admin/assets/js/add-school.js') }}"></script>
+
+
+
+
 @endsection

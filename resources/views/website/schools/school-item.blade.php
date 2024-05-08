@@ -1,7 +1,9 @@
 <div class="col-sm-6 col-lg-4 pe-3 ps-3 pt-4 pt-lg-0 inner-course">
     <article class="post">
         <figure class="feature-image">
-            <img src="/assets/img/educator-img30.jpg" alt="">
+            {{-- <img src="{{ asset('/public/uploads/schools/logo/{{ $scool->logo }}') }}" alt=""> --}}
+            <img src="/uploads/schools/logo/{{ $school->logo }}" alt=""   >
+
             <a href="{{ route('school.details', ['school_id'=>$school->id]) }}" class="bookmark-icon">
                 <i aria-hidden="true" class="far fa-bookmark"></i>
             </a>
