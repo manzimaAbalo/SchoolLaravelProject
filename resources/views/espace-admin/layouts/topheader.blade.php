@@ -36,8 +36,12 @@
                                 <i class="ti ti-list-check fs-6"></i>
                                 <p class="mb-0 fs-3">Mes Taches</p>
                             </a>
-                            <a href="{{ route('login') }}" class="btn btn-outline-primary mx-3 mt-2 d-block">Se
-                                déconnecter</a>
+                            <a href="#" class="btn btn-outline-primary mx-3 mt-2 d-block">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: inline;">
+                                    @csrf
+                                    <button type="submit"  class="button-primary">Déconnexion</button>
+                                </form>
+                            </a>
                         </div>
                     </div>
                 </li>

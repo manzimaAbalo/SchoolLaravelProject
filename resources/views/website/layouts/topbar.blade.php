@@ -50,11 +50,9 @@
                                                     <a href="product-cart.html">Commentaires</a>
                                                 </li>
                                                 <li>
-                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                                        style="display: inline;">
+                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: inline;">
                                                         @csrf
-                                                        <button type="submit"
-                                                            class="button-primary">Déconnexion</button>
+                                                        <button type="submit"  class="button-primary">Déconnexion</button>
                                                     </form>
                                                 </li>
                                             </ul>
